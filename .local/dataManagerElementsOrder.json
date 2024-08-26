@@ -41,8 +41,16 @@
       "Path": "Workflow/ZohoAutomation.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
-        "strScreenshotsPath&Sequence_1",
-        "browser&Sequence_2"
+        "ueZohoBrowser&Sequence_2",
+        "strBrowserTitle&Sequence_1",
+        "strValidateName&Sequence_16",
+        "strValidateStatus&Sequence_4",
+        "strValidateSubject&Sequence_20",
+        "strValidateEmail&Sequence_17",
+        "boolPaginaTickets&Sequence_4",
+        "strOutScreenshotPath&Sequence_6",
+        "strScreenshotPath&Sequence_6",
+        "strScreenshotsPath&Sequence_1"
       ],
       "ArgumentsSectionElementsOrder": [
         "out_boolSuccessful",
@@ -69,6 +77,30 @@
         "strEmail&Sequence_1",
         "strSubject&Sequence_1",
         "strName&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Framework/TakeScreenshot.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "strScreenshotsPath&Sequence_10",
+        "strScreenshotPath&Sequence_10",
+        "strOutScreenshotPath&Sequence_10"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_browser"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Workflow/ZohoClean.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "browser&Sequence_1"
       ],
       "ArgumentsSectionElementsOrder": [],
       "ConstantsSectionElementsOrder": [],
