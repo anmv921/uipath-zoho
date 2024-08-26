@@ -1,0 +1,78 @@
+{
+  "Workflows": [
+    {
+      "Path": null,
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": null,
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Main.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "strSubject&Sequence_1",
+        "strEmail&Sequence_1",
+        "strContactName&Sequence_1",
+        "strRequestFilePath&Sequence_1",
+        "boolFileExists&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Workflow/ReadRequestExcel.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "dtRequest&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "out_strSubject",
+        "out_strEmail",
+        "out_strContactName",
+        "in_strRequestFilePath"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Workflow/ZohoAutomation.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "strScreenshotsPath&Sequence_1",
+        "browser&Sequence_2"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "out_boolSuccessful",
+        "in_strContactName",
+        "in_strSubject",
+        "in_strEmail"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Workflow/ReadConfig.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Tests/UnitTest_ZohoAutomation.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "boolSuccessful&Sequence_1",
+        "strEmail&Sequence_1",
+        "strSubject&Sequence_1",
+        "strName&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    }
+  ]
+}
