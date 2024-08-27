@@ -72,12 +72,13 @@
       <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Sequência" sap:VirtualizedContainerService.HintSize="416,202.66666666666666" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Sequência" sap:VirtualizedContainerService.HintSize="416,326.6666666666667" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="354,114.66666666666667" sap2010:WorkflowViewState.IdRef="WriteLine_1" Text="[Environment.CurrentDirectory]" />
+    <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="354,124" sap2010:WorkflowViewState.IdRef="WriteLine_1" Text="[Environment.CurrentDirectory]" />
+    <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="354,114.66666666666667" sap2010:WorkflowViewState.IdRef="WriteLine_2" Text="[DateTime.Now.ToString(&quot;yyyy-MMM-dd-HH-mm-ss&quot;)]" />
   </Sequence>
 </Activity>
