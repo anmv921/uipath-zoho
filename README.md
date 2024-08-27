@@ -5,6 +5,15 @@ allows us to automatically generate a
 ticket in the Zoho helpesk software from an
 Excel file.
 
+The projects follows the book
+**Robotic Process Automation Projects**
+by Nandan Mullakara.
+
+Zoho is a web application which follows
+the SaaS model and provides a 
+time-limited trial, availavle after
+sign-up at https://desk.zoho.com .
+
 ## Input
 
 The input looks as follows:
@@ -65,6 +74,70 @@ following page is shown:
 To return to the homepage, we click the '<'
 button, highlighted in green.
 
-That's it!
+## UIPath process
 
-Happy automation!
+The process described above is implemented 
+with the UIPath program.
+
+The program consists of the following
+components:
+
+> ### ReadConfig.xaml
+>
+> - Reads the Config.xlsx 
+> - Saves the data into the 
+> dictionary of type <String, Object>
+
+> ### ReadRequestExcel.xaml
+>
+> - Reads the request and saves the
+> ticket info into string variables.
+> 
+> - If the request is not available,
+> an exception is launched and the 
+> workflow is terminated.
+
+> ### ZohoAutomation.xaml
+>
+> - Opens the Zoho ticket creation form
+>
+> - Inputs the ticket data into the fields
+>
+> - Checks if the data was inserted
+> correctly
+>
+> - Submits the form
+> - Returns to the frontpage
+> - Exits the ticket creation form
+> in case of failure, returning to
+> the homepage as well
+
+> ### ZohoClean.xaml
+> - Clears the Zoho page and returns
+> to the homepage in order to
+> avoid errors with the creation of 
+> any further tickets.
+
+> ### Main.xaml
+> - Combines all these workflows,
+> - Checks if the ticket was created
+> successfully.
+> - In case of success, the Request.xlsx
+> file is moved to 'Processed' folder,
+> whose location can be defined in
+> the Config.xlsx. 
+> - The archived file is 
+> renamed to the current date and time
+> with the format
+> "Request_yyyy-MMM-dd-HH-mm-ss.xlsx"
+
+## Demo
+
+The results of the RPA program can
+be seen in the following video:
+
+***
+
+***That's it!***
+
+**Happy automation!**
