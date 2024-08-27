@@ -20,7 +20,18 @@ creation. The fields are then:
 - Ticket subject
 
 The file location can be configured in
-the Config.xlsx file located in the Data
+Config.xlsx, located in the Data
 folder.
 
-The 
+## Zoho automation
+
+The zoho automation is composed of a few
+steps.
+
+First, the Zoho homepage must be open, and
+then the RPA program needs to open the
+ticket creation page by clicking on the
+'+' button. The following screenshot shows
+this page.
+
+![tickets page](https://github.com/anmv921/uipath-zoho/blob/main/Data/ZohoProcessScreenshots/01.PNG)
