@@ -2,12 +2,12 @@
 
 This project is a UIPath automation that 
 allows us to automatically generate a 
-ticket in the Zoho helpesk software from an
+ticket in the Zoho helpdesk software from an
 Excel file.
 
 The projects follows the book
 **Robotic Process Automation Projects**
-by Nandan Mullakara.
+by _Nandan Mullakara_.
 
 Zoho is a web application which follows
 the SaaS model and provides a 
@@ -110,7 +110,7 @@ components:
 > - Returns to the frontpage
 > - Exits the ticket creation form
 > in case of failure, returning to
-> the homepage as well
+> the homepage as well.
 
 > ### ZohoClean.xaml
 > - Clears the Zoho page and returns
