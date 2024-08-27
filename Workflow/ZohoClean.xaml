@@ -5,7 +5,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1668,2721.3333333333335</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1668,2681.3333333333335</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ZohoClean_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -108,21 +108,17 @@
       <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="ZohoClean" sap:VirtualizedContainerService.HintSize="1678,2656.6666666666665" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="ZohoClean" sap:VirtualizedContainerService.HintSize="1678,2616.6666666666665" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="ui:UiElement" Name="browser" />
-      <Variable x:TypeArguments="x:String" Name="strPageTitle">
-        <Variable.Default>
-          <Literal x:TypeArguments="x:String">*No Company*</Literal>
-        </Variable.Default>
-      </Variable>
+      <Variable x:TypeArguments="x:String" Default="*No Company*" Name="strPageTitle" />
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="1616,176.66666666666666" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;[Zoho] A limpar a página&quot;]" />
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="1616,176.66666666666666" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;[Zoho] Cleaning the page&quot;]" />
     <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="1616,149.33333333333334" sap2010:WorkflowViewState.IdRef="MultipleAssign_1">
       <ui:MultipleAssign.AssignOperations>
         <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
@@ -137,21 +133,21 @@
         </scg:List>
       </ui:MultipleAssign.AssignOperations>
     </ui:MultipleAssign>
-    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Browser Edge - Zoho" sap:VirtualizedContainerService.HintSize="1616,2075.3333333333335" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" OpenMode="Never" OutUiElement="[browser]" ScopeGuid="39609fdc-7a04-4c75-b489-289319c2e71e" Version="V2">
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Browser Edge - Zoho" sap:VirtualizedContainerService.HintSize="1616,2035.3333333333333" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" OpenMode="Never" OutUiElement="[browser]" ScopeGuid="39609fdc-7a04-4c75-b489-289319c2e71e" Version="V2">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Fazer" sap:VirtualizedContainerService.HintSize="1582,1824" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence DisplayName="Fazer" sap:VirtualizedContainerService.HintSize="1582,1784" sap2010:WorkflowViewState.IdRef="Sequence_2">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <uix:NCheckState DisplayName="Check App State 'Ticket Informações'" sap:VirtualizedContainerService.HintSize="1520,1173.3333333333333" sap2010:WorkflowViewState.IdRef="NCheckState_4" ScopeIdentifier="39609fdc-7a04-4c75-b489-289319c2e71e" Timeout="5" Version="V3">
+            <uix:NCheckState DisplayName="Check App State 'Ticket Informações'" sap:VirtualizedContainerService.HintSize="1520,1133.3333333333333" sap2010:WorkflowViewState.IdRef="NCheckState_4" ScopeIdentifier="39609fdc-7a04-4c75-b489-289319c2e71e" Timeout="5" Version="V3">
               <uix:NCheckState.IfExists>
-                <Sequence DisplayName="Destino aparece" sap:VirtualizedContainerService.HintSize="1016,920" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                <Sequence DisplayName="Destino aparece" sap:VirtualizedContainerService.HintSize="1016,880" sap2010:WorkflowViewState.IdRef="Sequence_3">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -178,7 +174,7 @@
                       </uix:VerifyExecutionOptions>
                     </uix:NClick.VerifyOptions>
                   </uix:NClick>
-                  <uix:NCheckState DisplayName="Check App State 'Não salvo'" sap:VirtualizedContainerService.HintSize="954,600" sap2010:WorkflowViewState.IdRef="NCheckState_2" ScopeIdentifier="39609fdc-7a04-4c75-b489-289319c2e71e" Timeout="5" Version="V3">
+                  <uix:NCheckState DisplayName="Check App State 'Não salvo'" sap:VirtualizedContainerService.HintSize="954,560" sap2010:WorkflowViewState.IdRef="NCheckState_2" ScopeIdentifier="39609fdc-7a04-4c75-b489-289319c2e71e" Timeout="5" Version="V3">
                     <uix:NCheckState.IfExists>
                       <Sequence DisplayName="Destino aparece" sap:VirtualizedContainerService.HintSize="450,313.3333333333333" sap2010:WorkflowViewState.IdRef="Sequence_5">
                         <sap:WorkflowViewStateService.ViewState>
@@ -300,6 +296,6 @@
         <uix:TargetApp Area="1909, -11, 1942, 1102" BrowserType="Edge" IconBase64="iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAAKHSURBVDhPhZPtS5NRGMYlC6GIgqh/oL70tRd6xTKyPhSB9CXog5EV5tRlpYsSEgTBysKyDKtVEKlMp9uojEjH3ObLJEW3ls5cb3PTLefUvbjHPVf3OTvSB3u54Dee5z7XdXN27vOk/EsANkuJhZ5ANCRPRIJgzMbpB7hDrBG2v4tMpTq3BXtblNjXWoT0lgvIaruOvskRidYUwvZnkWEZ0VDYWYMzHbfQ7fsIs3cIp9pvIM9UTUtoIVYI+1LR4qp4Quo83laGQ4YS6N1WFkKZ7TkUprvssZFIFfakqLCS2EJkEkeI3jdfe3H01TUc0F3GXDyK7PeVqBrQ0BIqRCwpKqxPyPJT94w32O1zxmjLsZ4J50K/fxQlXXU4+a4Cofkw3412rJM1yBHRpKhQZPQMyLu1BWCwg9ujLeRs05zHs09v8W12AjuaFbBNDkfInyGiPJxKaPLpvynNNXDP+NDvd8EXmeL4o9MY+unmB5ipL6FxTn0n/yYR5w3WhqWY7djrUtS72mEn80F9MZo+mxCMzaLWrsf2pjycM97GyDTL4h6xXMR5g42eucAPtm2L1w46C77lrZpc7GouQIbuElrHLDCND9IdGGYNropoUlRI/+B3hXc259P2vczAZfU58NBhwHg4wN9z6D5U9jewx5simhQVsnVuq8y2PRMPM8MShaUoDhtUaBw1stdcEU2KCuXVg1qwS9Po6oCKxsZGt4iq6xHOGqv4OTimvsyRf7+I8jCbwEul+T7WqbP42IosD3CFQouwBqU9anTQmOl86sm/WsR5gzRZlg3lfS9w0VKL0ZCHfW3snj8mngjURB2hIDaI6G9R8XREigXnE5KTnk8QaWLpP0pJ+QXgDlI/XSFonAAAAABJRU5ErkJggg==" InformativeScreenshot="2545df41a3a6dbe203f0c0285457f7ab.jpg" Selector="[string.Format(&quot;&lt;html app='msedge.exe' title='{0}' /&gt;&quot;, strPageTitle)]" Title="No Company" Url="https://desk.zoho.eu/agent/*" />
       </uix:NApplicationCard.TargetApp>
     </uix:NApplicationCard>
-    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="1050,167.33333333333334" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;[Zoho] Fim da limpeza da página&quot;]" />
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="1616,167.33333333333334" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;[Zoho] Done cleaning the page&quot;]" />
   </Sequence>
 </Activity>

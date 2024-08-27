@@ -3,7 +3,7 @@
     <x:Property Name="in_browser" Type="InArgument(ui:UiElement)" />
     <x:Property Name="in_Config" Type="InArgument(scg:Dictionary(x:String, x:Object))" />
   </x:Members>
-  <sap:VirtualizedContainerService.HintSize>613.3333333333334,696</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>613.3333333333334,690.6666666666666</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -111,7 +111,7 @@
       <AssemblyReference>System.ServiceModel.Activities</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap:VirtualizedContainerService.HintSize="496,631.3333333333334" sap2010:WorkflowViewState.IdRef="Sequence_10">
+  <Sequence sap:VirtualizedContainerService.HintSize="496,626" sap2010:WorkflowViewState.IdRef="Sequence_10">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="strScreenshotsPath" />
       <Variable x:TypeArguments="x:String" Name="strScreenshotPath" />
@@ -135,6 +135,6 @@
         <OutArgument x:TypeArguments="x:String">[strOutScreenshotPath]</OutArgument>
       </uix:NTakeScreenshot.SavedTo>
     </uix:NTakeScreenshot>
-    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="434,172.66666666666666" sap2010:WorkflowViewState.IdRef="LogMessage_1" Message="[&quot;Screenshot guardado no ficheiro &quot; + strOutScreenshotPath]" />
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="434,167.33333333333334" sap2010:WorkflowViewState.IdRef="LogMessage_1" Message="[&quot;Screenshot saved with the filename &quot; + strOutScreenshotPath]" />
   </Sequence>
 </Activity>

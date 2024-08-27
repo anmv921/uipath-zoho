@@ -9,7 +9,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>2422.6666666666665,13126</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>2422.6666666666665,13150</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ZohoAutomation_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -127,7 +127,7 @@
       <x:Boolean x:Key="ShouldCollapseAll">False</x:Boolean>
     </scg:Dictionary>
   </sap:WorkflowViewStateService.ViewState>
-  <Sequence DisplayName="ZohoAutomation" sap:VirtualizedContainerService.HintSize="2432.6666666666665,13061.333333333334" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="ZohoAutomation" sap:VirtualizedContainerService.HintSize="2432.6666666666665,13085.333333333334" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="strScreenshotsPath" />
       <Variable x:TypeArguments="x:String" Default="*No Company*" Name="strBrowserTitle" />
@@ -137,7 +137,7 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="2370.6666666666665,179.33333333333334" sap2010:WorkflowViewState.IdRef="MultipleAssign_1">
+    <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="2370.6666666666665,180" sap2010:WorkflowViewState.IdRef="MultipleAssign_1">
       <ui:MultipleAssign.AssignOperations>
         <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
           <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_1">
@@ -159,9 +159,9 @@
         </scg:List>
       </ui:MultipleAssign.AssignOperations>
     </ui:MultipleAssign>
-    <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="2370.6666666666665,12794" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+    <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="2370.6666666666665,12817.333333333334" sap2010:WorkflowViewState.IdRef="TryCatch_1">
       <TryCatch.Try>
-        <Sequence DisplayName="Sequence Try" sap:VirtualizedContainerService.HintSize="2332,10742.666666666666" sap2010:WorkflowViewState.IdRef="Sequence_2">
+        <Sequence DisplayName="Sequence Try" sap:VirtualizedContainerService.HintSize="2332,10758.666666666666" sap2010:WorkflowViewState.IdRef="Sequence_2">
           <Sequence.Variables>
             <Variable x:TypeArguments="ui:UiElement" Name="uelZohoBrowser" />
           </Sequence.Variables>
@@ -171,13 +171,13 @@
               <x:Boolean x:Key="IsPinned">False</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Browser Edge: Zoho" sap:VirtualizedContainerService.HintSize="2270,10654.666666666666" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" OpenMode="Never" OutUiElement="[uelZohoBrowser]" ScopeGuid="9e73eb13-81b4-4ec2-871d-9ed999276062" Version="V2" WindowResize="Maximize">
+          <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Browser Edge: Zoho" sap:VirtualizedContainerService.HintSize="2270,10670.666666666666" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" OpenMode="Never" OutUiElement="[uelZohoBrowser]" ScopeGuid="9e73eb13-81b4-4ec2-871d-9ed999276062" Version="V2" WindowResize="Maximize">
             <uix:NApplicationCard.Body>
               <ActivityAction x:TypeArguments="x:Object">
                 <ActivityAction.Argument>
                   <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
                 </ActivityAction.Argument>
-                <Sequence DisplayName="Fazer" sap:VirtualizedContainerService.HintSize="2236,10413.333333333334" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                <Sequence DisplayName="Fazer" sap:VirtualizedContainerService.HintSize="2236,10428.666666666666" sap2010:WorkflowViewState.IdRef="Sequence_4">
                   <Sequence.Variables>
                     <Variable x:TypeArguments="x:Boolean" Name="boolPaginaTickets" />
                     <Variable x:TypeArguments="x:String" Name="strValidateStatus" />
@@ -197,7 +197,7 @@
                     </ui:Activate.Target>
                   </ui:Activate>
                   <ui:MaximizeWindow Window="{x:Null}" DisplayName="Maximize Window" sap:VirtualizedContainerService.HintSize="2174,57.333333333333336" sap2010:WorkflowViewState.IdRef="MaximizeWindow_1" />
-                  <Assign sap:VirtualizedContainerService.HintSize="2174,116.66666666666667" sap2010:WorkflowViewState.IdRef="Assign_5">
+                  <Assign sap:VirtualizedContainerService.HintSize="2174,117.33333333333333" sap2010:WorkflowViewState.IdRef="Assign_5">
                     <Assign.To>
                       <OutArgument x:TypeArguments="x:Boolean">[boolPaginaTickets]</OutArgument>
                     </Assign.To>
@@ -205,22 +205,22 @@
                       <InArgument x:TypeArguments="x:Boolean">False</InArgument>
                     </Assign.Value>
                   </Assign>
-                  <Parallel sap:VirtualizedContainerService.HintSize="2174,500" sap2010:WorkflowViewState.IdRef="Parallel_1">
+                  <Parallel sap:VirtualizedContainerService.HintSize="2174,502" sap2010:WorkflowViewState.IdRef="Parallel_1">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                         <x:Boolean x:Key="IsPinned">False</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <uix:NCheckState DisplayName="Check App State 'Todos Tickets'" sap:VirtualizedContainerService.HintSize="1040,420.6666666666667" sap2010:WorkflowViewState.IdRef="NCheckState_1" Timeout="10" Version="V3">
+                    <uix:NCheckState DisplayName="Check App State 'Todos Tickets'" sap:VirtualizedContainerService.HintSize="1040,422.6666666666667" sap2010:WorkflowViewState.IdRef="NCheckState_1" Timeout="10" Version="V3">
                       <uix:NCheckState.IfExists>
-                        <Sequence DisplayName="Destino aparece" sap:VirtualizedContainerService.HintSize="496,200.66666666666666" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                        <Sequence DisplayName="Destino aparece" sap:VirtualizedContainerService.HintSize="496,201.33333333333334" sap2010:WorkflowViewState.IdRef="Sequence_5">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
-                          <Assign sap:VirtualizedContainerService.HintSize="434,110" sap2010:WorkflowViewState.IdRef="Assign_6">
+                          <Assign sap:VirtualizedContainerService.HintSize="434,110.66666666666667" sap2010:WorkflowViewState.IdRef="Assign_6">
                             <Assign.To>
                               <OutArgument x:TypeArguments="x:Boolean">[boolPaginaTickets]</OutArgument>
                             </Assign.To>
@@ -231,7 +231,7 @@
                         </Sequence>
                       </uix:NCheckState.IfExists>
                       <uix:NCheckState.IfNotExists>
-                        <Sequence DisplayName="Destino não aparece" sap:VirtualizedContainerService.HintSize="450,106.66666666666667" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                        <Sequence DisplayName="Destino não aparece" sap:VirtualizedContainerService.HintSize="450,107.33333333333333" sap2010:WorkflowViewState.IdRef="Sequence_6">
                           <Sequence.Variables>
                             <Variable x:TypeArguments="x:String" Name="strScreenshotPath" />
                             <Variable x:TypeArguments="x:String" Name="strOutScreenshotPath" />
@@ -253,15 +253,15 @@
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
                     </uix:NCheckState>
-                    <uix:NCheckState DisplayName="Check App State 'Tickets'" sap:VirtualizedContainerService.HintSize="1040,420.6666666666667" sap2010:WorkflowViewState.IdRef="NCheckState_3" ScopeIdentifier="9e73eb13-81b4-4ec2-871d-9ed999276062" Timeout="10" Version="V3">
+                    <uix:NCheckState DisplayName="Check App State 'Tickets'" sap:VirtualizedContainerService.HintSize="1040,422.6666666666667" sap2010:WorkflowViewState.IdRef="NCheckState_3" ScopeIdentifier="9e73eb13-81b4-4ec2-871d-9ed999276062" Timeout="10" Version="V3">
                       <uix:NCheckState.IfExists>
-                        <Sequence DisplayName="Destino aparece" sap:VirtualizedContainerService.HintSize="496,200.66666666666666" sap2010:WorkflowViewState.IdRef="Sequence_12">
+                        <Sequence DisplayName="Destino aparece" sap:VirtualizedContainerService.HintSize="496,201.33333333333334" sap2010:WorkflowViewState.IdRef="Sequence_12">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
-                          <Assign sap:VirtualizedContainerService.HintSize="434,110" sap2010:WorkflowViewState.IdRef="Assign_8">
+                          <Assign sap:VirtualizedContainerService.HintSize="434,110.66666666666667" sap2010:WorkflowViewState.IdRef="Assign_8">
                             <Assign.To>
                               <OutArgument x:TypeArguments="x:Boolean">[boolPaginaTickets]</OutArgument>
                             </Assign.To>
@@ -272,7 +272,7 @@
                         </Sequence>
                       </uix:NCheckState.IfExists>
                       <uix:NCheckState.IfNotExists>
-                        <Sequence DisplayName="Destino não aparece" sap:VirtualizedContainerService.HintSize="450,106.66666666666667" sap2010:WorkflowViewState.IdRef="Sequence_13">
+                        <Sequence DisplayName="Destino não aparece" sap:VirtualizedContainerService.HintSize="450,107.33333333333333" sap2010:WorkflowViewState.IdRef="Sequence_13">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -285,39 +285,39 @@
                       </uix:NCheckState.Target>
                     </uix:NCheckState>
                   </Parallel>
-                  <ui:IfElseIfV2 Condition="[boolPaginaTickets=False]" DisplayName="Else If" sap:VirtualizedContainerService.HintSize="2174,886" sap2010:WorkflowViewState.IdRef="IfElseIfV2_1">
+                  <ui:IfElseIfV2 Condition="[boolPaginaTickets=False]" DisplayName="Else If" sap:VirtualizedContainerService.HintSize="2174,890.6666666666666" sap2010:WorkflowViewState.IdRef="IfElseIfV2_1">
                     <ui:IfElseIfV2.Else>
-                      <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,256.6666666666667" sap2010:WorkflowViewState.IdRef="Sequence_11">
+                      <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,258" sap2010:WorkflowViewState.IdRef="Sequence_11">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                             <x:Boolean x:Key="IsPinned">False</x:Boolean>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
-                        <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="354,168.66666666666666" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;[Zoho] Página dos tickets encontrada&quot;]" />
+                        <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="354,170" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;[Zoho] Ticket page found&quot;]" />
                       </Sequence>
                     </ui:IfElseIfV2.Else>
                     <ui:IfElseIfV2.ElseIfs>
                       <sc:BindingList x:TypeArguments="ui:IfElseIfBlock" AllowEdit="True" AllowNew="True" AllowRemove="True" RaiseListChangedEvents="True" />
                     </ui:IfElseIfV2.ElseIfs>
                     <ui:IfElseIfV2.Then>
-                      <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="416,410" sap2010:WorkflowViewState.IdRef="Sequence_10">
+                      <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="416,412.6666666666667" sap2010:WorkflowViewState.IdRef="Sequence_10">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
-                        <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="TakeScreenshot - Invoke Workflow File (Framework\TakeScreenshot.xaml)" sap:VirtualizedContainerService.HintSize="354,208" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Framework\TakeScreenshot.xaml">
+                        <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="TakeScreenshot - Invoke Workflow File (Framework\TakeScreenshot.xaml)" sap:VirtualizedContainerService.HintSize="354,210" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Framework\TakeScreenshot.xaml">
                           <ui:InvokeWorkflowFile.Arguments>
                             <InArgument x:TypeArguments="ui:UiElement" x:Key="in_browser">[uelZohoBrowser]</InArgument>
                             <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="in_Config">[in_Config]</InArgument>
                           </ui:InvokeWorkflowFile.Arguments>
                         </ui:InvokeWorkflowFile>
-                        <Throw DisplayName="Throw AE" Exception="[New Exception(&quot;Elemento 'Todos Tickets' não existe&quot;)]" sap:VirtualizedContainerService.HintSize="354,114" sap2010:WorkflowViewState.IdRef="Throw_1" />
+                        <Throw DisplayName="Throw AE" Exception="[New Exception(&quot;Element 'All Tickets' doesn't exist&quot;)]" sap:VirtualizedContainerService.HintSize="354,114.66666666666667" sap2010:WorkflowViewState.IdRef="Throw_1" />
                       </Sequence>
                     </ui:IfElseIfV2.Then>
                   </ui:IfElseIfV2>
-                  <uix:NClick ActivateBefore="True" ClickType="Single" CursorMotionType="Smooth" DisplayName="Click '+'" sap:VirtualizedContainerService.HintSize="2174,228" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="9e73eb13-81b4-4ec2-871d-9ed999276062" Version="V3">
+                  <uix:NClick ActivateBefore="True" ClickType="Single" CursorMotionType="Smooth" DisplayName="Click '+'" sap:VirtualizedContainerService.HintSize="2174,229.33333333333334" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="9e73eb13-81b4-4ec2-871d-9ed999276062" Version="V3">
                     <uix:NClick.Target>
                       <uix:TargetAnchorable BrowserURL="https://desk.zoho.eu/agent/nocompany1x1/no-company/tickets/list/all-cases" CVScreenId="283542ae-156b-4624-9723-0c3a88f779ef" CvElementArea="1274, 235, 90, 55" CvType="InputBox" DesignTimeRectangle="1276, 253, 48, 19" DesignTimeScaleFactor="1.5" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;desk&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;header&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;ul&amp;gt;li&amp;gt;div&amp;gt;div&amp;gt;a&amp;gt;i' tag='I' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' tag='I' class='zd_font_icons zd_v213bca50f0a zd_v266b0c87383 zd_v2-allmoduleformshortcut-plusIcon' aaname='' /&gt;" Guid="d15c7445-d9cd-4ea9-aeaa-a7f0972fee0f" InformativeScreenshot="515acf6b75a4dba90e01ad997f3225f7.png" ScopeSelectorArgument="[string.Format(&quot;&lt;html app='msedge.exe' title='{0}' /&gt;&quot;, strBrowserTitle)]" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive" WaitForReadyArgument="Interactive">
                         <uix:TargetAnchorable.Anchors>
@@ -338,8 +338,8 @@
                       </uix:VerifyExecutionOptions>
                     </uix:NClick.VerifyOptions>
                   </uix:NClick>
-                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="2174,178" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info" Message="[&quot;[Zoho] Click +&quot;]" />
-                  <Sequence DisplayName="Contact Name" sap:VirtualizedContainerService.HintSize="2174,2149.3333333333335" sap2010:WorkflowViewState.IdRef="Sequence_16">
+                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="2174,179.33333333333334" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info" Message="[&quot;[Zoho] Click +&quot;]" />
+                  <Sequence DisplayName="Contact Name" sap:VirtualizedContainerService.HintSize="2174,2162" sap2010:WorkflowViewState.IdRef="Sequence_16">
                     <Sequence.Variables>
                       <Variable x:TypeArguments="x:String" Name="strValidateName" />
                     </Sequence.Variables>
@@ -349,31 +349,31 @@
                         <x:Boolean x:Key="IsPinned">False</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <uix:NCheckState DisplayName="Check App State 'Ticket Informações'" sap:VirtualizedContainerService.HintSize="954,667.3333333333334" sap2010:WorkflowViewState.IdRef="NCheckState_2" ScopeIdentifier="9e73eb13-81b4-4ec2-871d-9ed999276062" Timeout="10" Version="V3">
+                    <uix:NCheckState DisplayName="Check App State 'Ticket Informações'" sap:VirtualizedContainerService.HintSize="954,671.3333333333334" sap2010:WorkflowViewState.IdRef="NCheckState_2" ScopeIdentifier="9e73eb13-81b4-4ec2-871d-9ed999276062" Timeout="10" Version="V3">
                       <uix:NCheckState.IfExists>
-                        <Sequence DisplayName="Destino aparece" sap:VirtualizedContainerService.HintSize="450,262" sap2010:WorkflowViewState.IdRef="Sequence_7">
+                        <Sequence DisplayName="Destino aparece" sap:VirtualizedContainerService.HintSize="450,263.3333333333333" sap2010:WorkflowViewState.IdRef="Sequence_7">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
-                          <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="388,171.33333333333334" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Info" Message="[&quot;[Zoho] Página de criação de tickets aberta&quot;]" />
+                          <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="388,172.66666666666666" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Info" Message="[&quot;[Zoho] Ticket creation page opened&quot;]" />
                         </Sequence>
                       </uix:NCheckState.IfExists>
                       <uix:NCheckState.IfNotExists>
-                        <Sequence DisplayName="Destino não aparece" sap:VirtualizedContainerService.HintSize="450,415.3333333333333" sap2010:WorkflowViewState.IdRef="Sequence_8">
+                        <Sequence DisplayName="Destino não aparece" sap:VirtualizedContainerService.HintSize="450,418" sap2010:WorkflowViewState.IdRef="Sequence_8">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
-                          <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="TakeScreenshot - Invoke Workflow File (Framework\TakeScreenshot.xaml)" sap:VirtualizedContainerService.HintSize="388,208" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="Framework\TakeScreenshot.xaml">
+                          <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="TakeScreenshot - Invoke Workflow File (Framework\TakeScreenshot.xaml)" sap:VirtualizedContainerService.HintSize="388,210" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="Framework\TakeScreenshot.xaml">
                             <ui:InvokeWorkflowFile.Arguments>
                               <InArgument x:TypeArguments="ui:UiElement" x:Key="in_browser">[uelZohoBrowser]</InArgument>
                               <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="in_Config">[in_Config]</InArgument>
                             </ui:InvokeWorkflowFile.Arguments>
                           </ui:InvokeWorkflowFile>
-                          <Throw DisplayName="Throw AE" Exception="[New Exception(&quot;Elemento 'Ticket Informações' não existe&quot;)]" sap:VirtualizedContainerService.HintSize="388,116.66666666666667" sap2010:WorkflowViewState.IdRef="Throw_2" />
+                          <Throw DisplayName="Throw AE" Exception="[New Exception(&quot;Element 'Ticket Information' doesn't exist&quot;)]" sap:VirtualizedContainerService.HintSize="388,117.33333333333333" sap2010:WorkflowViewState.IdRef="Throw_2" />
                         </Sequence>
                       </uix:NCheckState.IfNotExists>
                       <uix:NCheckState.Target>
@@ -386,7 +386,7 @@
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
                     </uix:NCheckState>
-                    <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Nome do Contato'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="954,289.3333333333333" sap2010:WorkflowViewState.IdRef="NTypeInto_1" ScopeIdentifier="9e73eb13-81b4-4ec2-871d-9ed999276062" Text="[in_strContactName]" Version="V3">
+                    <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Nome do Contato'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="954,292.6666666666667" sap2010:WorkflowViewState.IdRef="NTypeInto_1" ScopeIdentifier="9e73eb13-81b4-4ec2-871d-9ed999276062" Text="[in_strContactName]" Version="V3">
                       <uix:NTypeInto.Target>
                         <uix:TargetAnchorable BrowserURL="https://desk.zoho.eu/agent/nocompany1x1/no-company/tickets/new" DesignTimeRectangle="387, 529, 390, 42" DesignTimeScaleFactor="1.5" ElementType="InputBox" FullSelectorArgument="&lt;webctrl id='ZD_45' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='ZD_45' tag='INPUT' type='text' class='zdr_input_tag zd_v2-textbox-container zd_v2-textbox-basic zd_v2-textbox-varClass zd_v2-textbox-xmedium zd_v2-textbox-primary zd_v2266b1e491d zd_v2-textbox-effect zd_v2-textbox-borderColor_default' aaname='Nome do Contato' /&gt;" Guid="61fde99e-4e09-4037-8e34-20d9646385b0" InformativeScreenshot="11e466ea209273e5df44f99f5fa13208.png" IsResponsive="True" ScopeSelectorArgument="[string.Format(&quot;&lt;html app='msedge.exe' title='{0}' /&gt;&quot;, strBrowserTitle)]" SearchSteps="FuzzySelector" Version="V4" Visibility="Interactive" WaitForReadyArgument="Interactive">
                           <uix:TargetAnchorable.Anchors>
@@ -413,7 +413,7 @@
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
                     </uix:NTypeInto>
-                    <uix:NGetText DisplayName="Get Text 'Nome do Contato'" sap:VirtualizedContainerService.HintSize="954,190.66666666666666" sap2010:WorkflowViewState.IdRef="NGetText_1" ScopeIdentifier="9e73eb13-81b4-4ec2-871d-9ed999276062" TextString="[strValidateName]" Version="V3">
+                    <uix:NGetText DisplayName="Get Text 'Nome do Contato'" sap:VirtualizedContainerService.HintSize="954,191.33333333333334" sap2010:WorkflowViewState.IdRef="NGetText_1" ScopeIdentifier="9e73eb13-81b4-4ec2-871d-9ed999276062" TextString="[strValidateName]" Version="V3">
                       <uix:NGetText.Target>
                         <uix:TargetAnchorable BrowserURL="https://desk.zoho.eu/agent/nocompany1x1/no-company/tickets/new" CVScreenId="e05e45a1-bb03-4875-8189-78507d342983" CvTextArea="386, 537, 54, 21" CvType="AnyWordGroup" DesignTimeRectangle="387, 529, 390, 42" DesignTimeScaleFactor="1.5" ElementType="InputBox" FullSelectorArgument="&lt;webctrl id='ZD_45' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='ZD_45' tag='INPUT' type='text' class='zdr_input_tag zd_v2-textbox-container zd_v2-textbox-basic zd_v2-textbox-varClass zd_v2-textbox-xmedium zd_v2-textbox-primary zd_v2266b1e491d zd_v2-textbox-effect zd_v2-textbox-borderColor_default' aaname='Nome do Contato' /&gt;" Guid="0532b1e8-bfe7-4416-b04a-307b7de3e972" ImageBase64="" InformativeScreenshot="f580af076fcaf05eb7672395882520f1.png" IsResponsive="True" ScopeSelectorArgument="[string.Format(&quot;&lt;html app='msedge.exe' title='{0}' /&gt;&quot;, strBrowserTitle)]" SearchSteps="FuzzySelector" Version="V4" Visibility="Interactive" WaitForReadyArgument="Interactive">
                           <uix:TargetAnchorable.Anchors>
@@ -430,15 +430,15 @@
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
                     </uix:NGetText>
-                    <ui:IfElseIfV2 Condition="[strValidateName.Trim&lt;&gt;in_strContactName.Trim]" DisplayName="Else If" sap:VirtualizedContainerService.HintSize="954,879.3333333333334" sap2010:WorkflowViewState.IdRef="IfElseIfV2_2">
+                    <ui:IfElseIfV2 Condition="[strValidateName.Trim&lt;&gt;in_strContactName.Trim]" DisplayName="Else If" sap:VirtualizedContainerService.HintSize="954,884" sap2010:WorkflowViewState.IdRef="IfElseIfV2_2">
                       <ui:IfElseIfV2.Else>
-                        <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,256.6666666666667" sap2010:WorkflowViewState.IdRef="Sequence_15">
+                        <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,258" sap2010:WorkflowViewState.IdRef="Sequence_15">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
-                          <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="354,168.66666666666666" sap2010:WorkflowViewState.IdRef="LogMessage_6" Message="[&quot;[Zoho] Nome inserido - &quot; + strValidateName]" />
+                          <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="354,170" sap2010:WorkflowViewState.IdRef="LogMessage_6" Level="Info" Message="[&quot;[Zoho] Name inserted - &quot; + strValidateName]" />
                         </Sequence>
                       </ui:IfElseIfV2.Else>
                       <ui:IfElseIfV2.ElseIfs>
@@ -451,24 +451,24 @@
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
                       <ui:IfElseIfV2.Then>
-                        <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="416,410" sap2010:WorkflowViewState.IdRef="Sequence_14">
+                        <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="416,412.6666666666667" sap2010:WorkflowViewState.IdRef="Sequence_14">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
-                          <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="TakeScreenshot - Invoke Workflow File (Framework\TakeScreenshot.xaml)" sap:VirtualizedContainerService.HintSize="354,208" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_3" UnSafe="False" WorkflowFileName="Framework\TakeScreenshot.xaml">
+                          <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="TakeScreenshot - Invoke Workflow File (Framework\TakeScreenshot.xaml)" sap:VirtualizedContainerService.HintSize="354,210" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_3" UnSafe="False" WorkflowFileName="Framework\TakeScreenshot.xaml">
                             <ui:InvokeWorkflowFile.Arguments>
                               <InArgument x:TypeArguments="ui:UiElement" x:Key="in_browser">[uelZohoBrowser]</InArgument>
                               <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="in_Config">[in_Config]</InArgument>
                             </ui:InvokeWorkflowFile.Arguments>
                           </ui:InvokeWorkflowFile>
-                          <Throw DisplayName="Throw AE" Exception="[New Exception(&quot;[Zoho] Nome mal introduzido - &quot; + strValidateName)]" sap:VirtualizedContainerService.HintSize="354,114" sap2010:WorkflowViewState.IdRef="Throw_3" />
+                          <Throw DisplayName="Throw AE" Exception="[New Exception(&quot;[Zoho] Name was not inserted correctly - &quot; + strValidateName)]" sap:VirtualizedContainerService.HintSize="354,114.66666666666667" sap2010:WorkflowViewState.IdRef="Throw_3" />
                         </Sequence>
                       </ui:IfElseIfV2.Then>
                     </ui:IfElseIfV2>
                   </Sequence>
-                  <Sequence DisplayName="Email" sap:VirtualizedContainerService.HintSize="2174,1482" sap2010:WorkflowViewState.IdRef="Sequence_17">
+                  <Sequence DisplayName="Email" sap:VirtualizedContainerService.HintSize="2174,1490.6666666666667" sap2010:WorkflowViewState.IdRef="Sequence_17">
                     <Sequence.Variables>
                       <Variable x:TypeArguments="x:String" Name="strValidateEmail" />
                     </Sequence.Variables>
@@ -478,7 +478,7 @@
                         <x:Boolean x:Key="IsPinned">False</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'E-mail'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="450,289.3333333333333" sap2010:WorkflowViewState.IdRef="NTypeInto_2" ScopeIdentifier="9e73eb13-81b4-4ec2-871d-9ed999276062" Text="[in_strEmail]" Version="V3">
+                    <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'E-mail'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="450,292.6666666666667" sap2010:WorkflowViewState.IdRef="NTypeInto_2" ScopeIdentifier="9e73eb13-81b4-4ec2-871d-9ed999276062" Text="[in_strEmail]" Version="V3">
                       <uix:NTypeInto.Target>
                         <uix:TargetAnchorable BrowserURL="https://desk.zoho.eu/agent/nocompany1x1/no-company/tickets/new" CVScreenId="8447cf6d-ee7d-4ef1-9408-1f69bc0603f9" CvElementArea="383, 809, 400, 53" CvType="InputBox" DesignTimeRectangle="387, 819, 390, 42" DesignTimeScaleFactor="1.5" ElementType="InputBox" FullSelectorArgument="&lt;webctrl id='ZD_47' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='ZD_47' tag='INPUT' type='text' class='zdr_input_tag zd_v2-textbox-container zd_v2-textbox-basic zd_v2-textbox-varClass zd_v2-textbox-xmedium zd_v2-textbox-primary zd_v2266b1e491d zd_v2-textbox-effect zd_v2-textbox-borderColor_default' aaname='E-mail' /&gt;" Guid="a66ceade-be07-4507-b359-15e8849a5638" InformativeScreenshot="91a1ac2dd4f9ad72232c56c1089ea60f.png" IsResponsive="True" ScopeSelectorArgument="[string.Format(&quot;&lt;html app='msedge.exe' title='{0}' /&gt;&quot;, strBrowserTitle)]" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive" WaitForReadyArgument="Interactive">
                           <uix:TargetAnchorable.Anchors>
@@ -499,7 +499,7 @@
                         </uix:VerifyExecutionTypeIntoOptions>
                       </uix:NTypeInto.VerifyOptions>
                     </uix:NTypeInto>
-                    <uix:NGetText DisplayName="Get Text 'E-mail'" sap:VirtualizedContainerService.HintSize="450,190.66666666666666" sap2010:WorkflowViewState.IdRef="NGetText_2" ScopeIdentifier="9e73eb13-81b4-4ec2-871d-9ed999276062" TextString="[strValidateEmail]" Version="V3">
+                    <uix:NGetText DisplayName="Get Text 'E-mail'" sap:VirtualizedContainerService.HintSize="450,191.33333333333334" sap2010:WorkflowViewState.IdRef="NGetText_2" ScopeIdentifier="9e73eb13-81b4-4ec2-871d-9ed999276062" TextString="[strValidateEmail]" Version="V3">
                       <uix:NGetText.Target>
                         <uix:TargetAnchorable BrowserURL="https://desk.zoho.eu/agent/nocompany1x1/no-company/tickets/new" CVScreenId="757e111f-733e-460f-8f93-a77de4ff9200" CvTextArea="386, 792, 234, 25" CvType="AnyWordGroup" DesignTimeRectangle="387, 784, 390, 42" DesignTimeScaleFactor="1.5" ElementType="InputBox" FullSelectorArgument="&lt;webctrl id='ZD_47' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='ZD_47' tag='INPUT' type='text' class='zdr_input_tag zd_v2-textbox-container zd_v2-textbox-basic zd_v2-textbox-varClass zd_v2-textbox-xmedium zd_v2-textbox-primary zd_v2266b1e491d zd_v2-textbox-effect zd_v2-textbox-borderColor_default' aaname='E-mail' /&gt;" Guid="06653c79-c12d-4bc5-9d26-5f02dfdb2e7a" InformativeScreenshot="24d9c169c440a4fc813f73e6c2c8c4a3.png" IsResponsive="True" ScopeSelectorArgument="[string.Format(&quot;&lt;html app='msedge.exe' title='{0}' /&gt;&quot;, strBrowserTitle)]" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive">
                           <uix:TargetAnchorable.Anchors>
@@ -510,39 +510,39 @@
                         </uix:TargetAnchorable>
                       </uix:NGetText.Target>
                     </uix:NGetText>
-                    <ui:IfElseIfV2 Condition="[strValidateEmail&lt;&gt;in_strEmail]" DisplayName="Else If" sap:VirtualizedContainerService.HintSize="450,879.3333333333334" sap2010:WorkflowViewState.IdRef="IfElseIfV2_3">
+                    <ui:IfElseIfV2 Condition="[strValidateEmail&lt;&gt;in_strEmail]" DisplayName="Else If" sap:VirtualizedContainerService.HintSize="450,884" sap2010:WorkflowViewState.IdRef="IfElseIfV2_3">
                       <ui:IfElseIfV2.Else>
-                        <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,256.6666666666667" sap2010:WorkflowViewState.IdRef="Sequence_19">
+                        <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,258" sap2010:WorkflowViewState.IdRef="Sequence_19">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
-                          <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="354,168.66666666666666" sap2010:WorkflowViewState.IdRef="LogMessage_7" Level="Info" Message="[&quot;[Zoho] Email inserido - &quot; + strValidateEmail]" />
+                          <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="354,170" sap2010:WorkflowViewState.IdRef="LogMessage_7" Level="Info" Message="[&quot;[Zoho] Email inserted - &quot; + strValidateEmail]" />
                         </Sequence>
                       </ui:IfElseIfV2.Else>
                       <ui:IfElseIfV2.ElseIfs>
                         <sc:BindingList x:TypeArguments="ui:IfElseIfBlock" AllowEdit="True" AllowNew="True" AllowRemove="True" RaiseListChangedEvents="True" />
                       </ui:IfElseIfV2.ElseIfs>
                       <ui:IfElseIfV2.Then>
-                        <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="416,410" sap2010:WorkflowViewState.IdRef="Sequence_18">
+                        <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="416,412.6666666666667" sap2010:WorkflowViewState.IdRef="Sequence_18">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
-                          <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="TakeScreenshot - Invoke Workflow File (Framework\TakeScreenshot.xaml)" sap:VirtualizedContainerService.HintSize="354,208" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_4" UnSafe="False" WorkflowFileName="Framework\TakeScreenshot.xaml">
+                          <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="TakeScreenshot - Invoke Workflow File (Framework\TakeScreenshot.xaml)" sap:VirtualizedContainerService.HintSize="354,210" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_4" UnSafe="False" WorkflowFileName="Framework\TakeScreenshot.xaml">
                             <ui:InvokeWorkflowFile.Arguments>
                               <InArgument x:TypeArguments="ui:UiElement" x:Key="in_browser">[uelZohoBrowser]</InArgument>
                               <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="in_Config">[in_Config]</InArgument>
                             </ui:InvokeWorkflowFile.Arguments>
                           </ui:InvokeWorkflowFile>
-                          <Throw DisplayName="Throw AE" Exception="[New Exception(&quot;[Zoho] Email mal introduzido - &quot; + strValidateEmail)]" sap:VirtualizedContainerService.HintSize="354,114" sap2010:WorkflowViewState.IdRef="Throw_4" />
+                          <Throw DisplayName="Throw AE" Exception="[New Exception(&quot;[Zoho] Email wrongly inserted - &quot; + strValidateEmail)]" sap:VirtualizedContainerService.HintSize="354,114.66666666666667" sap2010:WorkflowViewState.IdRef="Throw_4" />
                         </Sequence>
                       </ui:IfElseIfV2.Then>
                     </ui:IfElseIfV2>
                   </Sequence>
-                  <Sequence DisplayName="Subject" sap:VirtualizedContainerService.HintSize="2174,1482" sap2010:WorkflowViewState.IdRef="Sequence_20">
+                  <Sequence DisplayName="Subject" sap:VirtualizedContainerService.HintSize="2174,1490.6666666666667" sap2010:WorkflowViewState.IdRef="Sequence_20">
                     <Sequence.Variables>
                       <Variable x:TypeArguments="x:String" Name="strValidateSubject" />
                     </Sequence.Variables>
@@ -552,7 +552,7 @@
                         <x:Boolean x:Key="IsPinned">False</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Assunto'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="450,289.3333333333333" sap2010:WorkflowViewState.IdRef="NTypeInto_3" ScopeIdentifier="9e73eb13-81b4-4ec2-871d-9ed999276062" Text="[in_strSubject]" Version="V3">
+                    <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Assunto'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="450,292.6666666666667" sap2010:WorkflowViewState.IdRef="NTypeInto_3" ScopeIdentifier="9e73eb13-81b4-4ec2-871d-9ed999276062" Text="[in_strSubject]" Version="V3">
                       <uix:NTypeInto.Target>
                         <uix:TargetAnchorable BrowserURL="https://desk.zoho.eu/agent/nocompany1x1/no-company/tickets/new" CVScreenId="fcebf033-771e-443a-ab66-6c5eef2df0bf" CvElementArea="382, 638, 819, 55" CvType="InputBox" DesignTimeRectangle="387, 651, 808, 42" DesignTimeScaleFactor="1.5" ElementType="InputBox" FullSelectorArgument="&lt;webctrl id='ZD_49' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='ZD_49' tag='INPUT' type='text' class='zdr_input_tag zd_v2-textbox-container zd_v2-textbox-basic zd_v2-textbox-varClass zd_v2-textbox-xmedium zd_v2-textbox-primary zd_v2266b1e491d zd_v2-textbox-effect zd_v2-textbox-borderColor_default' aaname='Assunto' /&gt;" Guid="72abce0d-b343-42c8-8073-76c641797ca2" InformativeScreenshot="798d6cbcab71e88780ce433eaf19ca9d.png" IsResponsive="True" ScopeSelectorArgument="[string.Format(&quot;&lt;html app='msedge.exe' title='{0}' /&gt;&quot;, strBrowserTitle)]" SearchSteps="FuzzySelector" Version="V4" Visibility="Interactive" WaitForReadyArgument="Interactive">
                           <uix:TargetAnchorable.Anchors>
@@ -573,7 +573,7 @@
                         </uix:VerifyExecutionTypeIntoOptions>
                       </uix:NTypeInto.VerifyOptions>
                     </uix:NTypeInto>
-                    <uix:NGetText DisplayName="Get Text 'Assunto'" sap:VirtualizedContainerService.HintSize="450,190.66666666666666" sap2010:WorkflowViewState.IdRef="NGetText_3" ScopeIdentifier="9e73eb13-81b4-4ec2-871d-9ed999276062" TextString="[strValidateSubject]" Version="V3">
+                    <uix:NGetText DisplayName="Get Text 'Assunto'" sap:VirtualizedContainerService.HintSize="450,191.33333333333334" sap2010:WorkflowViewState.IdRef="NGetText_3" ScopeIdentifier="9e73eb13-81b4-4ec2-871d-9ed999276062" TextString="[strValidateSubject]" Version="V3">
                       <uix:NGetText.Target>
                         <uix:TargetAnchorable BrowserURL="https://desk.zoho.eu/agent/nocompany1x1/no-company/tickets/new" CVScreenId="f7d93ee9-431a-4923-a640-7496dc263b29" CvElementArea="382, 638, 819, 55" CvType="InputBox" DesignTimeRectangle="387, 651, 808, 42" DesignTimeScaleFactor="1.5" ElementType="InputBox" FullSelectorArgument="&lt;webctrl id='ZD_49' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='ZD_49' tag='INPUT' type='text' class='zdr_input_tag zd_v2-textbox-container zd_v2-textbox-basic zd_v2-textbox-varClass zd_v2-textbox-xmedium zd_v2-textbox-primary zd_v2266b1e491d zd_v2-textbox-effect zd_v2-textbox-borderColor_default' aaname='Assunto' /&gt;" Guid="f0411e49-ffb2-41a1-ab93-1ebe3c0b0d8e" ImageBase64="" InformativeScreenshot="e297e2c0846d78914eb5ed2ec8afff4f.png" IsResponsive="True" ScopeSelectorArgument="[string.Format(&quot;&lt;html app='msedge.exe' title='{0}' /&gt;&quot;, strBrowserTitle)]" SearchSteps="FuzzySelector" Version="V4" Visibility="Interactive">
                           <uix:TargetAnchorable.Anchors>
@@ -584,39 +584,39 @@
                         </uix:TargetAnchorable>
                       </uix:NGetText.Target>
                     </uix:NGetText>
-                    <ui:IfElseIfV2 Condition="[strValidateSubject&lt;&gt;in_strSubject]" DisplayName="Else If" sap:VirtualizedContainerService.HintSize="450,879.3333333333334" sap2010:WorkflowViewState.IdRef="IfElseIfV2_4">
+                    <ui:IfElseIfV2 Condition="[strValidateSubject&lt;&gt;in_strSubject]" DisplayName="Else If" sap:VirtualizedContainerService.HintSize="450,884" sap2010:WorkflowViewState.IdRef="IfElseIfV2_4">
                       <ui:IfElseIfV2.Else>
-                        <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,256.6666666666667" sap2010:WorkflowViewState.IdRef="Sequence_22">
+                        <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,258" sap2010:WorkflowViewState.IdRef="Sequence_22">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
-                          <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="354,168.66666666666666" sap2010:WorkflowViewState.IdRef="LogMessage_8" Level="Info" Message="[&quot;[Zoho] Subject introduzido - &quot; + strValidateSubject]" />
+                          <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="354,170" sap2010:WorkflowViewState.IdRef="LogMessage_8" Level="Info" Message="[&quot;[Zoho] Subject inserted - &quot; + strValidateSubject]" />
                         </Sequence>
                       </ui:IfElseIfV2.Else>
                       <ui:IfElseIfV2.ElseIfs>
                         <sc:BindingList x:TypeArguments="ui:IfElseIfBlock" AllowEdit="True" AllowNew="True" AllowRemove="True" RaiseListChangedEvents="True" />
                       </ui:IfElseIfV2.ElseIfs>
                       <ui:IfElseIfV2.Then>
-                        <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="416,410" sap2010:WorkflowViewState.IdRef="Sequence_21">
+                        <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="416,412.6666666666667" sap2010:WorkflowViewState.IdRef="Sequence_21">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
-                          <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="TakeScreenshot - Invoke Workflow File (Framework\TakeScreenshot.xaml)" sap:VirtualizedContainerService.HintSize="354,208" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_5" UnSafe="False" WorkflowFileName="Framework\TakeScreenshot.xaml">
+                          <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="TakeScreenshot - Invoke Workflow File (Framework\TakeScreenshot.xaml)" sap:VirtualizedContainerService.HintSize="354,210" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_5" UnSafe="False" WorkflowFileName="Framework\TakeScreenshot.xaml">
                             <ui:InvokeWorkflowFile.Arguments>
                               <InArgument x:TypeArguments="ui:UiElement" x:Key="in_browser">[uelZohoBrowser]</InArgument>
                               <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="in_Config">[in_Config]</InArgument>
                             </ui:InvokeWorkflowFile.Arguments>
                           </ui:InvokeWorkflowFile>
-                          <Throw DisplayName="Throw AE" Exception="[New Exception(&quot;[Zoho] Subject mal introduzido - &quot; + strValidateSubject)]" sap:VirtualizedContainerService.HintSize="354,114" sap2010:WorkflowViewState.IdRef="Throw_5" />
+                          <Throw DisplayName="Throw AE" Exception="[New Exception(&quot;[Zoho] Subject incorrectly inserted - &quot; + strValidateSubject)]" sap:VirtualizedContainerService.HintSize="354,114.66666666666667" sap2010:WorkflowViewState.IdRef="Throw_5" />
                         </Sequence>
                       </ui:IfElseIfV2.Then>
                     </ui:IfElseIfV2>
                   </Sequence>
-                  <uix:NSelectItem DisplayName="Select Item 'Status'" sap:VirtualizedContainerService.HintSize="2174,190.66666666666666" sap2010:WorkflowViewState.IdRef="NSelectItem_1" Item="Open" ScopeIdentifier="9e73eb13-81b4-4ec2-871d-9ed999276062" Version="V3">
+                  <uix:NSelectItem DisplayName="Select Item 'Status'" sap:VirtualizedContainerService.HintSize="2174,191.33333333333334" sap2010:WorkflowViewState.IdRef="NSelectItem_1" Item="Open" ScopeIdentifier="9e73eb13-81b4-4ec2-871d-9ed999276062" Version="V3">
                     <uix:NSelectItem.Items>
                       <scg:List x:TypeArguments="x:String" Capacity="4">
                         <x:String>Open</x:String>
@@ -635,7 +635,7 @@
                       </uix:TargetAnchorable>
                     </uix:NSelectItem.Target>
                   </uix:NSelectItem>
-                  <uix:NGetText DisplayName="Get Text 'Status'" sap:VirtualizedContainerService.HintSize="2174,190.66666666666666" sap2010:WorkflowViewState.IdRef="NGetText_4" ScopeIdentifier="9e73eb13-81b4-4ec2-871d-9ed999276062" TextString="[strValidateStatus]" Version="V3">
+                  <uix:NGetText DisplayName="Get Text 'Status'" sap:VirtualizedContainerService.HintSize="2174,191.33333333333334" sap2010:WorkflowViewState.IdRef="NGetText_4" ScopeIdentifier="9e73eb13-81b4-4ec2-871d-9ed999276062" TextString="[strValidateStatus]" Version="V3">
                     <uix:NGetText.Target>
                       <uix:TargetAnchorable BrowserURL="https://desk.zoho.eu/agent/nocompany1x1/no-company/tickets/new" CVScreenId="ecdf66dd-31d4-4993-9455-9c0202640c56" CvElementArea="383, 931, 394, 45" CvType="InputBox" DesignTimeRectangle="387, 934, 365, 42" DesignTimeScaleFactor="1.5" ElementType="InputBox" FullSelectorArgument="&lt;webctrl id='ZD_50' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='ZD_50' tag='INPUT' type='text' class='zdr_input_tag zd_v2-textbox-pointer zd_v2-textbox-container zd_v2-textbox-basic zd_v2-textbox-varClass zd_v2-textbox-xmedium zd_v2-textbox-primary zd_v2266b1e491d zd_v2-textbox-effect zd_v2-textbox-borderColor_default zd_v2-textbox-inputDotted zd_v24af66c9aeb' aaname='Status' /&gt;" Guid="586a3952-b26a-442c-b7b6-2935144a3035" InformativeScreenshot="f5d0346697dcf29c103b1328c71a5b5f.png" IsResponsive="True" ScopeSelectorArgument="[string.Format(&quot;&lt;html app='msedge.exe' title='{0}' /&gt;&quot;, strBrowserTitle)]" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive" WaitForReadyArgument="Interactive">
                         <uix:TargetAnchorable.Anchors>
@@ -646,38 +646,38 @@
                       </uix:TargetAnchorable>
                     </uix:NGetText.Target>
                   </uix:NGetText>
-                  <ui:IfElseIfV2 Condition="[strValidateStatus&lt;&gt;&quot;Open&quot;]" DisplayName="Else If" sap:VirtualizedContainerService.HintSize="2174,886" sap2010:WorkflowViewState.IdRef="IfElseIfV2_5">
+                  <ui:IfElseIfV2 Condition="[strValidateStatus&lt;&gt;&quot;Open&quot;]" DisplayName="Else If" sap:VirtualizedContainerService.HintSize="2174,890.6666666666666" sap2010:WorkflowViewState.IdRef="IfElseIfV2_5">
                     <ui:IfElseIfV2.Else>
-                      <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,256.6666666666667" sap2010:WorkflowViewState.IdRef="Sequence_26">
+                      <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,258" sap2010:WorkflowViewState.IdRef="Sequence_26">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
-                        <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="354,168.66666666666666" sap2010:WorkflowViewState.IdRef="LogMessage_11" Level="Info" Message="[&quot;[Zoho] Status seleccionado - &quot; + strValidateStatus]" />
+                        <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="354,170" sap2010:WorkflowViewState.IdRef="LogMessage_11" Level="Info" Message="[&quot;[Zoho] Status selected - &quot; + strValidateStatus]" />
                       </Sequence>
                     </ui:IfElseIfV2.Else>
                     <ui:IfElseIfV2.ElseIfs>
                       <sc:BindingList x:TypeArguments="ui:IfElseIfBlock" AllowEdit="True" AllowNew="True" AllowRemove="True" RaiseListChangedEvents="True" />
                     </ui:IfElseIfV2.ElseIfs>
                     <ui:IfElseIfV2.Then>
-                      <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="416,410" sap2010:WorkflowViewState.IdRef="Sequence_25">
+                      <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="416,412.6666666666667" sap2010:WorkflowViewState.IdRef="Sequence_25">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
-                        <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="TakeScreenshot - Invoke Workflow File (Framework\TakeScreenshot.xaml)" sap:VirtualizedContainerService.HintSize="354,208" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_7" UnSafe="False" WorkflowFileName="Framework\TakeScreenshot.xaml">
+                        <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="TakeScreenshot - Invoke Workflow File (Framework\TakeScreenshot.xaml)" sap:VirtualizedContainerService.HintSize="354,210" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_7" UnSafe="False" WorkflowFileName="Framework\TakeScreenshot.xaml">
                           <ui:InvokeWorkflowFile.Arguments>
                             <InArgument x:TypeArguments="ui:UiElement" x:Key="in_browser">[uelZohoBrowser]</InArgument>
                             <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="in_Config">[in_Config]</InArgument>
                           </ui:InvokeWorkflowFile.Arguments>
                         </ui:InvokeWorkflowFile>
-                        <Throw Exception="[New Exception(&quot;[Zoho] Status mal inserido - &quot; + strValidateStatus)]" sap:VirtualizedContainerService.HintSize="354,114" sap2010:WorkflowViewState.IdRef="Throw_7" />
+                        <Throw Exception="[New Exception(&quot;[Zoho] Wrong status - &quot; + strValidateStatus)]" sap:VirtualizedContainerService.HintSize="354,114.66666666666667" sap2010:WorkflowViewState.IdRef="Throw_7" />
                       </Sequence>
                     </ui:IfElseIfV2.Then>
                   </ui:IfElseIfV2>
-                  <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Enviar'" sap:VirtualizedContainerService.HintSize="2174,228" sap2010:WorkflowViewState.IdRef="NClick_2" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="9e73eb13-81b4-4ec2-871d-9ed999276062" Version="V3">
+                  <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Enviar'" sap:VirtualizedContainerService.HintSize="2174,229.33333333333334" sap2010:WorkflowViewState.IdRef="NClick_2" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="9e73eb13-81b4-4ec2-871d-9ed999276062" Version="V3">
                     <uix:NClick.Target>
                       <uix:TargetAnchorable BrowserURL="https://desk.zoho.eu/agent/nocompany1x1/no-company/tickets/new" CVScreenId="574ed704-e12c-4963-95dc-cb9c6e603c73" CvElementArea="325, 990, 140, 46" CvTextArea="365, 1002, 61, 19" CvTextArgument="Enviar" CvType="Button" DesignTimeRectangle="327, 992, 135, 42" DesignTimeScaleFactor="1.5" ElementType="Button" FullSelectorArgument="&lt;webctrl aaname='Enviar' tag='BUTTON' type='button' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Enviar' tag='BUTTON' type='button' class='zdr_button_tag zd_v2-button-bold zd_v2266b1e491d zd_v2-button-primaryfilled zd_v2-button-medium zd_v2-button-container zd_v2-button-native zd_v2-button-varClass zd_v24af66c9aeb' check:innerText='Enviar' /&gt;" Guid="59a055e7-faf6-4314-8d4b-f4d2285b2e0e" InformativeScreenshot="b198e7f05e10b0e836fe41b5644580c6.png" ScopeSelectorArgument="[string.Format(&quot;&lt;html app='msedge.exe' title='{0}' /&gt;&quot;, strBrowserTitle)]" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive" />
                     </uix:NClick.Target>
@@ -692,16 +692,16 @@
                       </uix:VerifyExecutionOptions>
                     </uix:NClick.VerifyOptions>
                   </uix:NClick>
-                  <uix:NCheckState DisplayName="Check App State 'Fechar Ticket'" sap:VirtualizedContainerService.HintSize="2174,1608.6666666666667" sap2010:WorkflowViewState.IdRef="NCheckState_4" ScopeIdentifier="9e73eb13-81b4-4ec2-871d-9ed999276062" Timeout="10" Version="V3">
+                  <uix:NCheckState DisplayName="Check App State 'Fechar Ticket'" sap:VirtualizedContainerService.HintSize="2174,1576.6666666666667" sap2010:WorkflowViewState.IdRef="NCheckState_4" ScopeIdentifier="9e73eb13-81b4-4ec2-871d-9ed999276062" Timeout="10" Version="V3">
                     <uix:NCheckState.IfExists>
-                      <Sequence DisplayName="Destino aparece" sap:VirtualizedContainerService.HintSize="496,606.6666666666666" sap2010:WorkflowViewState.IdRef="Sequence_23">
+                      <Sequence DisplayName="Destino aparece" sap:VirtualizedContainerService.HintSize="496,610" sap2010:WorkflowViewState.IdRef="Sequence_23">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
-                        <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="434,178" sap2010:WorkflowViewState.IdRef="LogMessage_9" Level="Info" Message="[&quot;[Zoho] Sucesso ao criar o ticket&quot;]" />
-                        <Assign sap:VirtualizedContainerService.HintSize="434,116.66666666666667" sap2010:WorkflowViewState.IdRef="Assign_9">
+                        <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="434,179.33333333333334" sap2010:WorkflowViewState.IdRef="LogMessage_9" Level="Info" Message="[&quot;[Zoho] Success creating the ticket&quot;]" />
+                        <Assign sap:VirtualizedContainerService.HintSize="434,117.33333333333333" sap2010:WorkflowViewState.IdRef="Assign_9">
                           <Assign.To>
                             <OutArgument x:TypeArguments="x:Boolean">[out_boolSuccessful]</OutArgument>
                           </Assign.To>
@@ -709,7 +709,7 @@
                             <InArgument x:TypeArguments="x:Boolean">True</InArgument>
                           </Assign.Value>
                         </Assign>
-                        <uix:NClick ActivateBefore="True" ClickType="Single" CursorMotionType="Smooth" DisplayName="Click 'Ticket Propriedades'" sap:VirtualizedContainerService.HintSize="434,221.33333333333334" sap2010:WorkflowViewState.IdRef="NClick_3" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="9e73eb13-81b4-4ec2-871d-9ed999276062" Version="V3">
+                        <uix:NClick ActivateBefore="True" ClickType="Single" CursorMotionType="Smooth" DisplayName="Click 'Ticket Propriedades'" sap:VirtualizedContainerService.HintSize="434,222.66666666666666" sap2010:WorkflowViewState.IdRef="NClick_3" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="9e73eb13-81b4-4ec2-871d-9ed999276062" Version="V3">
                           <uix:NClick.Target>
                             <uix:TargetAnchorable BrowserURL="https://desk.zoho.eu/agent/nocompany1x1/no-company/tickets/details/179834000000265001" DesignTimeRectangle="308, 327, 20, 19" DesignTimeScaleFactor="1.5" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;desk&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;aside&amp;gt;div&amp;gt;div&amp;gt;button&amp;gt;i' isleaf='1' tag='I' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' isleaf='1' tag='I' class='zd_font_icons zd_v213bca50f0a zd_v2c63ab4c337 zd_v28356439d31 zd_v2b7664e0921' aaname='' /&gt;" Guid="0875feb8-8bb4-4220-97f7-6ca2012880ea" InformativeScreenshot="b00db2d9bf5232925d1c2a0ef637875d.png" ScopeSelectorArgument="[string.Format(&quot;&lt;html app='msedge.exe' title='{0}' /&gt;&quot;, strBrowserTitle)]" SearchSteps="FuzzySelector" Version="V4" Visibility="Interactive" WaitForReadyArgument="Interactive">
                               <uix:TargetAnchorable.Anchors>
@@ -733,26 +733,26 @@
                       </Sequence>
                     </uix:NCheckState.IfExists>
                     <uix:NCheckState.IfNotExists>
-                      <Sequence DisplayName="Destino não aparece" sap:VirtualizedContainerService.HintSize="1078,1363.3333333333333" sap2010:WorkflowViewState.IdRef="Sequence_24">
+                      <Sequence DisplayName="Destino não aparece" sap:VirtualizedContainerService.HintSize="1078,1330" sap2010:WorkflowViewState.IdRef="Sequence_24">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
-                        <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="TakeScreenshot - Invoke Workflow File (Framework\TakeScreenshot.xaml)" sap:VirtualizedContainerService.HintSize="1016,208" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_6" UnSafe="False" WorkflowFileName="Framework\TakeScreenshot.xaml">
+                        <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="TakeScreenshot - Invoke Workflow File (Framework\TakeScreenshot.xaml)" sap:VirtualizedContainerService.HintSize="1016,210" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_6" UnSafe="False" WorkflowFileName="Framework\TakeScreenshot.xaml">
                           <ui:InvokeWorkflowFile.Arguments>
                             <InArgument x:TypeArguments="ui:UiElement" x:Key="in_browser">[uelZohoBrowser]</InArgument>
                             <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="in_Config">[in_Config]</InArgument>
                           </ui:InvokeWorkflowFile.Arguments>
                         </ui:InvokeWorkflowFile>
-                        <Sequence DisplayName="Error handling" sap:VirtualizedContainerService.HintSize="1016,948" sap2010:WorkflowViewState.IdRef="Sequence_29">
+                        <Sequence DisplayName="Error handling" sap:VirtualizedContainerService.HintSize="1016,912" sap2010:WorkflowViewState.IdRef="Sequence_29">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                               <x:Boolean x:Key="IsPinned">False</x:Boolean>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
-                          <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Tickets'" sap:VirtualizedContainerService.HintSize="954,228" sap2010:WorkflowViewState.IdRef="NClick_4" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="9e73eb13-81b4-4ec2-871d-9ed999276062" Version="V3">
+                          <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Tickets'" sap:VirtualizedContainerService.HintSize="954,229.33333333333334" sap2010:WorkflowViewState.IdRef="NClick_4" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="9e73eb13-81b4-4ec2-871d-9ed999276062" Version="V3">
                             <uix:NClick.Target>
                               <uix:TargetAnchorable BrowserURL="https://desk.zoho.eu/agent/nocompany1x1/no-company/tickets/new" CVScreenId="bdf0de71-1862-4199-9c9d-58e560394914" CvTextArea="390, 251, 79, 21" CvTextArgument="Tickets" CvType="Text" DesignTimeRectangle="393, 250, 76, 26" DesignTimeScaleFactor="1.5" ElementType="Text" FullSelectorArgument="&lt;webctrl aaname='Tickets' parentid='react' tag='DIV' /&gt;" FuzzyAccuracy="1" FuzzySelectorArgument="&lt;webctrl aaname='Tickets' parentid='react' tag='DIV' type='' class='zd_v2-tab-tabText zd_v24af66c9aeb zd_v2050393fdda zd_v2eb439ba1e6 zd_v2577c9fa95f' check:innerText='Tickets' /&gt;" Guid="2d981a63-382a-4ed3-af8a-63350a536ffb" InformativeScreenshot="1f5e653b67991e397702a7c01496cf5c.png" ScopeSelectorArgument="[string.Format(&quot;&lt;html app='msedge.exe' title='{0}' /&gt;&quot;, strBrowserTitle)]" SearchSteps="FuzzySelector" Version="V4" Visibility="Interactive" WaitForReadyArgument="Interactive">
                                 <uix:TargetAnchorable.Anchors>
@@ -773,15 +773,15 @@
                               </uix:VerifyExecutionOptions>
                             </uix:NClick.VerifyOptions>
                           </uix:NClick>
-                          <uix:NCheckState DisplayName="Check App State 'Não salvo'" sap:VirtualizedContainerService.HintSize="954,597.3333333333334" sap2010:WorkflowViewState.IdRef="NCheckState_5" ScopeIdentifier="9e73eb13-81b4-4ec2-871d-9ed999276062" Timeout="5" Version="V3">
+                          <uix:NCheckState DisplayName="Check App State 'Não salvo'" sap:VirtualizedContainerService.HintSize="954,560" sap2010:WorkflowViewState.IdRef="NCheckState_5" ScopeIdentifier="9e73eb13-81b4-4ec2-871d-9ed999276062" Timeout="5" Version="V3">
                             <uix:NCheckState.IfExists>
-                              <Sequence DisplayName="Destino aparece" sap:VirtualizedContainerService.HintSize="450,312" sap2010:WorkflowViewState.IdRef="Sequence_27">
+                              <Sequence DisplayName="Destino aparece" sap:VirtualizedContainerService.HintSize="450,313.3333333333333" sap2010:WorkflowViewState.IdRef="Sequence_27">
                                 <sap:WorkflowViewStateService.ViewState>
                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                   </scg:Dictionary>
                                 </sap:WorkflowViewStateService.ViewState>
-                                <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Sim, deixar a página'" sap:VirtualizedContainerService.HintSize="388,221.33333333333334" sap2010:WorkflowViewState.IdRef="NClick_5" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="9e73eb13-81b4-4ec2-871d-9ed999276062" Version="V3">
+                                <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Sim, deixar a página'" sap:VirtualizedContainerService.HintSize="388,222.66666666666666" sap2010:WorkflowViewState.IdRef="NClick_5" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="9e73eb13-81b4-4ec2-871d-9ed999276062" Version="V3">
                                   <uix:NClick.Target>
                                     <uix:TargetAnchorable BrowserURL="https://desk.zoho.eu/agent/nocompany1x1/no-company/tickets/new" CVScreenId="2e249eb5-4054-412b-9ae2-e6090970d11a" CvElementArea="755, 472, 245, 47" CvTextArea="780, 485, 195, 22" CvTextArgument="Sim, Deixar A Pagina" CvType="Button" DesignTimeRectangle="758, 475, 240, 42" DesignTimeScaleFactor="1.5" ElementType="Button" FullSelectorArgument="&lt;webctrl id='ZD_76' tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl id='ZD_76' tag='BUTTON' type='button' class='zdr_button_tag zd_v2-button-bold zd_v2266b1e491d zd_v2-button-dangerfilled zd_v2-button-medium zd_v2-button-container zd_v2-button-native zd_v2-button-varClass zd_v24af66c9aeb' aaname='Sim, deixar a página' check:innerText='Sim, Deixar A Página' /&gt;" Guid="98ac614c-9948-4d04-bf20-7dadbcbd833c" InformativeScreenshot="7043799845e43fa4a719c1a29be23ab9.png" ScopeSelectorArgument="[string.Format(&quot;&lt;html app='msedge.exe' title='{0}' /&gt;&quot;, strBrowserTitle)]" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive">
                                       <uix:TargetAnchorable.Anchors>
@@ -805,7 +805,7 @@
                               </Sequence>
                             </uix:NCheckState.IfExists>
                             <uix:NCheckState.IfNotExists>
-                              <Sequence DisplayName="Destino não aparece" sap:VirtualizedContainerService.HintSize="450,106.66666666666667" sap2010:WorkflowViewState.IdRef="Sequence_28">
+                              <Sequence DisplayName="Destino não aparece" sap:VirtualizedContainerService.HintSize="450,107.33333333333333" sap2010:WorkflowViewState.IdRef="Sequence_28">
                                 <sap:WorkflowViewStateService.ViewState>
                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -824,7 +824,7 @@
                             </sap:WorkflowViewStateService.ViewState>
                           </uix:NCheckState>
                         </Sequence>
-                        <Throw DisplayName="Throw AE" Exception="[New Exception(&quot;[Zoho] Insucesso ao criar o ticket&quot;)]" sap:VirtualizedContainerService.HintSize="1016,116.66666666666667" sap2010:WorkflowViewState.IdRef="Throw_6" />
+                        <Throw DisplayName="Throw AE" Exception="[New Exception(&quot;[Zoho] Failed creating the ticket&quot;)]" sap:VirtualizedContainerService.HintSize="1016,117.33333333333333" sap2010:WorkflowViewState.IdRef="Throw_6" />
                       </Sequence>
                     </uix:NCheckState.IfNotExists>
                     <uix:NCheckState.Target>
@@ -847,7 +847,7 @@
         </Sequence>
       </TryCatch.Try>
       <TryCatch.Catches>
-        <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="2336.6666666666665,1711.3333333333333" sap2010:WorkflowViewState.IdRef="Catch`1_1">
+        <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="2336.6666666666665,1716" sap2010:WorkflowViewState.IdRef="Catch`1_1">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -858,13 +858,13 @@
             <ActivityAction.Argument>
               <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
             </ActivityAction.Argument>
-            <Sequence DisplayName="Sequence Exception" sap:VirtualizedContainerService.HintSize="1174,1640" sap2010:WorkflowViewState.IdRef="Sequence_3">
+            <Sequence DisplayName="Sequence Exception" sap:VirtualizedContainerService.HintSize="1174,1644" sap2010:WorkflowViewState.IdRef="Sequence_3">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="1112,148.66666666666666" sap2010:WorkflowViewState.IdRef="MultipleAssign_2">
+              <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="1112,149.33333333333334" sap2010:WorkflowViewState.IdRef="MultipleAssign_2">
                 <ui:MultipleAssign.AssignOperations>
                   <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
                     <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_3">
@@ -878,27 +878,27 @@
                   </scg:List>
                 </ui:MultipleAssign.AssignOperations>
               </ui:MultipleAssign>
-              <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="1112,175.33333333333334" sap2010:WorkflowViewState.IdRef="LogMessage_10" Level="Error" Message="[&quot;[Zoho] Ticket não criado devido a uma excepção | &quot; + exception.Message]" />
-              <Sequence DisplayName="Error handling - Limpar Zoho" sap:VirtualizedContainerService.HintSize="1112,1228" sap2010:WorkflowViewState.IdRef="Sequence_32">
+              <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="1112,176.66666666666666" sap2010:WorkflowViewState.IdRef="LogMessage_10" Level="Error" Message="[&quot;[Zoho] Ticket not created due to an exception | &quot; + exception.Message]" />
+              <Sequence DisplayName="Error handling - Limpar Zoho" sap:VirtualizedContainerService.HintSize="1112,1230" sap2010:WorkflowViewState.IdRef="Sequence_32">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     <x:Boolean x:Key="IsPinned">False</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
-                <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Edge: No Company" sap:VirtualizedContainerService.HintSize="1050,1117.3333333333333" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" InteractionMode="DebuggerApi" ScopeGuid="1d51e232-cd1c-477e-aa13-13ebbe21a491" Version="V2">
+                <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Browser Edge: No Company" sap:VirtualizedContainerService.HintSize="1050,1119.3333333333333" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" InteractionMode="DebuggerApi" OpenMode="Never" ScopeGuid="1d51e232-cd1c-477e-aa13-13ebbe21a491" Version="V2">
                   <uix:NApplicationCard.Body>
                     <ActivityAction x:TypeArguments="x:Object">
                       <ActivityAction.Argument>
                         <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
                       </ActivityAction.Argument>
-                      <Sequence DisplayName="Fazer" sap:VirtualizedContainerService.HintSize="1016,876" sap2010:WorkflowViewState.IdRef="Sequence_33">
+                      <Sequence DisplayName="Fazer" sap:VirtualizedContainerService.HintSize="1016,877.3333333333334" sap2010:WorkflowViewState.IdRef="Sequence_33">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
-                        <uix:NClick ActivateBefore="True" ClickType="Single" CursorMotionType="Smooth" DisplayName="Click 'Tickets'" sap:VirtualizedContainerService.HintSize="954,228" sap2010:WorkflowViewState.IdRef="NClick_6" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="1d51e232-cd1c-477e-aa13-13ebbe21a491" Version="V3">
+                        <uix:NClick ActivateBefore="True" ClickType="Single" CursorMotionType="Smooth" DisplayName="Click 'Tickets'" sap:VirtualizedContainerService.HintSize="954,229.33333333333334" sap2010:WorkflowViewState.IdRef="NClick_6" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="1d51e232-cd1c-477e-aa13-13ebbe21a491" Version="V3">
                           <uix:NClick.Target>
                             <uix:TargetAnchorable BrowserURL="https://desk.zoho.eu/agent/nocompany1x1/no-company/tickets/new" CVScreenId="bdf0de71-1862-4199-9c9d-58e560394914" CvTextArea="390, 251, 79, 21" CvTextArgument="Tickets" CvType="Text" DesignTimeRectangle="393, 250, 76, 26" DesignTimeScaleFactor="1.5" ElementType="Text" FullSelectorArgument="&lt;webctrl aaname='Tickets' parentid='react' tag='DIV' /&gt;" FuzzyAccuracy="1" FuzzySelectorArgument="&lt;webctrl aaname='Tickets' parentid='react' tag='DIV' type='' class='zd_v2-tab-tabText zd_v24af66c9aeb zd_v2050393fdda zd_v2eb439ba1e6 zd_v2577c9fa95f' check:innerText='Tickets' /&gt;" Guid="2d981a63-382a-4ed3-af8a-63350a536ffb" InformativeScreenshot="1f5e653b67991e397702a7c01496cf5c.png" ScopeSelectorArgument="[string.Format(&quot;&lt;html app='msedge.exe' title='{0}' /&gt;&quot;, strBrowserTitle)]" SearchSteps="FuzzySelector" Version="V4" Visibility="Interactive" WaitForReadyArgument="Interactive">
                               <uix:TargetAnchorable.Anchors>
@@ -973,7 +973,7 @@
                     </ActivityAction>
                   </uix:NApplicationCard.Body>
                   <uix:NApplicationCard.TargetApp>
-                    <uix:TargetApp Area="1909, -11, 1942, 1102" BrowserType="Edge" IconBase64="iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAAKHSURBVDhPhZPtS5NRGMYlC6GIgqh/oL70tRd6xTKyPhSB9CXog5EV5tRlpYsSEgTBysKyDKtVEKlMp9uojEjH3ObLJEW3ls5cb3PTLefUvbjHPVf3OTvSB3u54Dee5z7XdXN27vOk/EsANkuJhZ5ANCRPRIJgzMbpB7hDrBG2v4tMpTq3BXtblNjXWoT0lgvIaruOvskRidYUwvZnkWEZ0VDYWYMzHbfQ7fsIs3cIp9pvIM9UTUtoIVYI+1LR4qp4Quo83laGQ4YS6N1WFkKZ7TkUprvssZFIFfakqLCS2EJkEkeI3jdfe3H01TUc0F3GXDyK7PeVqBrQ0BIqRCwpKqxPyPJT94w32O1zxmjLsZ4J50K/fxQlXXU4+a4Cofkw3412rJM1yBHRpKhQZPQMyLu1BWCwg9ujLeRs05zHs09v8W12AjuaFbBNDkfInyGiPJxKaPLpvynNNXDP+NDvd8EXmeL4o9MY+unmB5ipL6FxTn0n/yYR5w3WhqWY7djrUtS72mEn80F9MZo+mxCMzaLWrsf2pjycM97GyDTL4h6xXMR5g42eucAPtm2L1w46C77lrZpc7GouQIbuElrHLDCND9IdGGYNropoUlRI/+B3hXc259P2vczAZfU58NBhwHg4wN9z6D5U9jewx5simhQVsnVuq8y2PRMPM8MShaUoDhtUaBw1stdcEU2KCuXVg1qwS9Po6oCKxsZGt4iq6xHOGqv4OTimvsyRf7+I8jCbwEul+T7WqbP42IosD3CFQouwBqU9anTQmOl86sm/WsR5gzRZlg3lfS9w0VKL0ZCHfW3snj8mngjURB2hIDaI6G9R8XREigXnE5KTnk8QaWLpP0pJ+QXgDlI/XSFonAAAAABJRU5ErkJggg==" InformativeScreenshot="eb449e7a0e0a7652e12f6160df00cb9e.jpg" Selector="[string.Format(&quot;&lt;html app='msedge.exe' title='{0}' /&gt;&quot;, strBrowserTitle)]" Title="No Company" Url="https://desk.zoho.eu/agent/nocompany1x1/no-company/tickets/new" />
+                    <uix:TargetApp Area="1909, -11, 1942, 1102" BrowserType="Edge" IconBase64="iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAAKHSURBVDhPhZPtS5NRGMYlC6GIgqh/oL70tRd6xTKyPhSB9CXog5EV5tRlpYsSEgTBysKyDKtVEKlMp9uojEjH3ObLJEW3ls5cb3PTLefUvbjHPVf3OTvSB3u54Dee5z7XdXN27vOk/EsANkuJhZ5ANCRPRIJgzMbpB7hDrBG2v4tMpTq3BXtblNjXWoT0lgvIaruOvskRidYUwvZnkWEZ0VDYWYMzHbfQ7fsIs3cIp9pvIM9UTUtoIVYI+1LR4qp4Quo83laGQ4YS6N1WFkKZ7TkUprvssZFIFfakqLCS2EJkEkeI3jdfe3H01TUc0F3GXDyK7PeVqBrQ0BIqRCwpKqxPyPJT94w32O1zxmjLsZ4J50K/fxQlXXU4+a4Cofkw3412rJM1yBHRpKhQZPQMyLu1BWCwg9ujLeRs05zHs09v8W12AjuaFbBNDkfInyGiPJxKaPLpvynNNXDP+NDvd8EXmeL4o9MY+unmB5ipL6FxTn0n/yYR5w3WhqWY7djrUtS72mEn80F9MZo+mxCMzaLWrsf2pjycM97GyDTL4h6xXMR5g42eucAPtm2L1w46C77lrZpc7GouQIbuElrHLDCND9IdGGYNropoUlRI/+B3hXc259P2vczAZfU58NBhwHg4wN9z6D5U9jewx5simhQVsnVuq8y2PRMPM8MShaUoDhtUaBw1stdcEU2KCuXVg1qwS9Po6oCKxsZGt4iq6xHOGqv4OTimvsyRf7+I8jCbwEul+T7WqbP42IosD3CFQouwBqU9anTQmOl86sm/WsR5gzRZlg3lfS9w0VKL0ZCHfW3snj8mngjURB2hIDaI6G9R8XREigXnE5KTnk8QaWLpP0pJ+QXgDlI/XSFonAAAAABJRU5ErkJggg==" InformativeScreenshot="eb449e7a0e0a7652e12f6160df00cb9e.jpg" Selector="[string.Format(&quot;&lt;html app='msedge.exe' title='{0}' /&gt;&quot;, strBrowserTitle)]" Title="No Company" Url="https://desk.zoho.eu/agent/*" />
                   </uix:NApplicationCard.TargetApp>
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
