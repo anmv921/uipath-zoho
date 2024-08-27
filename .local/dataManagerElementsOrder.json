@@ -12,6 +12,10 @@
       "Path": "Main.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
+        "strFullProcessedName&Sequence_4",
+        "strProcessedFileName&Sequence_4",
+        "boolTicketCreated&Sequence_1",
+        "Config&Sequence_1",
         "strSubject&Sequence_1",
         "strEmail&Sequence_1",
         "strContactName&Sequence_1",
@@ -41,7 +45,7 @@
       "Path": "Workflow/ZohoAutomation.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
-        "ueZohoBrowser&Sequence_2",
+        "uelZohoBrowser&Sequence_2",
         "strBrowserTitle&Sequence_1",
         "strValidateName&Sequence_16",
         "strValidateStatus&Sequence_4",
@@ -53,6 +57,7 @@
         "strScreenshotsPath&Sequence_1"
       ],
       "ArgumentsSectionElementsOrder": [
+        "in_Config",
         "out_boolSuccessful",
         "in_strContactName",
         "in_strSubject",
@@ -62,10 +67,14 @@
       "AddedNamespaces": null
     },
     {
-      "Path": "Workflow/ReadConfig.xaml",
+      "Path": "Framework/ReadConfig.xaml",
       "SortBy": 0,
-      "VariablesSectionElementsOrder": [],
-      "ArgumentsSectionElementsOrder": [],
+      "VariablesSectionElementsOrder": [
+        "dtConfig&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "out_Config"
+      ],
       "ConstantsSectionElementsOrder": [],
       "AddedNamespaces": null
     },
@@ -73,6 +82,7 @@
       "Path": "Tests/UnitTest_ZohoAutomation.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
+        "Config&Sequence_1",
         "boolSuccessful&Sequence_1",
         "strEmail&Sequence_1",
         "strSubject&Sequence_1",
@@ -91,6 +101,7 @@
         "strOutScreenshotPath&Sequence_10"
       ],
       "ArgumentsSectionElementsOrder": [
+        "in_Config",
         "in_browser"
       ],
       "ConstantsSectionElementsOrder": [],
@@ -100,8 +111,19 @@
       "Path": "Workflow/ZohoClean.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
+        "strPageTitle&Sequence_1",
         "browser&Sequence_1"
       ],
+      "ArgumentsSectionElementsOrder": [
+        "in_Config"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Sequência.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
       "ArgumentsSectionElementsOrder": [],
       "ConstantsSectionElementsOrder": [],
       "AddedNamespaces": null
