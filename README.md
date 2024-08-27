@@ -12,7 +12,7 @@ by Nandan Mullakara.
 Zoho is a web application which follows
 the SaaS model and provides a 
 time-limited trial, availavle after
-sign-up at https://desk.zoho.com .
+sign-up at https://desk.zoho.com.
 
 ## Input
 
