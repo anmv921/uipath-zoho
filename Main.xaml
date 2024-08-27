@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Main" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="678,3502" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:sc="clr-namespace:System.ComponentModel;assembly=System.ComponentModel.TypeConverter" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="678,3770" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:sc="clr-namespace:System.ComponentModel;assembly=System.ComponentModel.TypeConverter" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
       <x:String>System.Activities</x:String>
@@ -94,7 +94,7 @@
       <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="688,3437.3333333333335" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="688,3705.3333333333335" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:Boolean" Name="boolFileExists" />
       <Variable x:TypeArguments="x:String" Name="strRequestFilePath" />
@@ -184,9 +184,9 @@
       </Assign.Value>
     </Assign>
     <ui:PathExists Resource="{x:Null}" DisplayName="Path Exists" Exists="[boolFileExists]" sap:VirtualizedContainerService.HintSize="626,150.66666666666666" sap2010:WorkflowViewState.IdRef="PathExists_1" Path="[strRequestFilePath]" PathType="File" />
-    <If Condition="[boolFileExists]" sap:VirtualizedContainerService.HintSize="626,2374" sap2010:WorkflowViewState.IdRef="If_1">
+    <If Condition="[boolFileExists]" sap:VirtualizedContainerService.HintSize="626,2642" sap2010:WorkflowViewState.IdRef="If_1">
       <If.Then>
-        <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="592,1956" sap2010:WorkflowViewState.IdRef="Sequence_2">
+        <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="592,2224" sap2010:WorkflowViewState.IdRef="Sequence_2">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -216,23 +216,25 @@
               <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="in_Config">[Config]</InArgument>
             </ui:InvokeWorkflowFile.Arguments>
           </ui:InvokeWorkflowFile>
-          <ui:IfElseIfV2 Condition="[boolTicketCreated]" DisplayName="Else If" sap:VirtualizedContainerService.HintSize="530,884.6666666666666" sap2010:WorkflowViewState.IdRef="IfElseIfV2_1">
+          <ui:IfElseIfV2 Condition="[boolTicketCreated]" DisplayName="Else If" sap:VirtualizedContainerService.HintSize="530,1152.6666666666667" sap2010:WorkflowViewState.IdRef="IfElseIfV2_1">
             <ui:IfElseIfV2.Else>
-              <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,104.66666666666667" sap2010:WorkflowViewState.IdRef="Sequence_5">
+              <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,255.33333333333334" sap2010:WorkflowViewState.IdRef="Sequence_5">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
+                <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="354,167.33333333333334" sap2010:WorkflowViewState.IdRef="LogMessage_5" Level="Error" Message="[&quot;Zoho Ticket not created and file is not processed yet. Please check the input request file and reprocess the same request&quot;]" />
               </Sequence>
             </ui:IfElseIfV2.Else>
             <ui:IfElseIfV2.ElseIfs>
               <sc:BindingList x:TypeArguments="ui:IfElseIfBlock" AllowEdit="True" AllowNew="True" AllowRemove="True" RaiseListChangedEvents="True" />
             </ui:IfElseIfV2.ElseIfs>
             <ui:IfElseIfV2.Then>
-              <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="496,569.3333333333334" sap2010:WorkflowViewState.IdRef="Sequence_4">
+              <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="496,686.6666666666666" sap2010:WorkflowViewState.IdRef="Sequence_4">
                 <Sequence.Variables>
                   <Variable x:TypeArguments="x:String" Name="strProcessedFileName" />
+                  <Variable x:TypeArguments="x:String" Name="strFullProcessedName" />
                 </Sequence.Variables>
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -244,10 +246,18 @@
                     <OutArgument x:TypeArguments="x:String">[strProcessedFileName]</OutArgument>
                   </Assign.To>
                   <Assign.Value>
-                    <InArgument x:TypeArguments="x:String">[DateTime.Now.ToString("yyyy-MMM-dd-HH-mm-ss") + ".xlsx"]</InArgument>
+                    <InArgument x:TypeArguments="x:String">["Request_" + DateTime.Now.ToString("yyyy-MMM-dd-HH-mm-ss") + ".xlsx"]</InArgument>
                   </Assign.Value>
                 </Assign>
-                <ui:MoveFile ContinueOnError="{x:Null}" DestinationResource="{x:Null}" PathResource="{x:Null}" Destination="[Path.Combine(Config(&quot;ProcessedFolderPath&quot;).ToString, strProcessedFileName)]" DisplayName="Move File" sap:VirtualizedContainerService.HintSize="434,196.66666666666666" sap2010:WorkflowViewState.IdRef="MoveFile_1" Path="[strRequestFilePath]" />
+                <Assign sap:VirtualizedContainerService.HintSize="434,117.33333333333333" sap2010:WorkflowViewState.IdRef="Assign_4">
+                  <Assign.To>
+                    <OutArgument x:TypeArguments="x:String">[strFullProcessedName]</OutArgument>
+                  </Assign.To>
+                  <Assign.Value>
+                    <InArgument x:TypeArguments="x:String">[Path.Combine(Config("ProcessedFolderPath").ToString, strProcessedFileName)]</InArgument>
+                  </Assign.Value>
+                </Assign>
+                <ui:MoveFile ContinueOnError="{x:Null}" DestinationResource="{x:Null}" PathResource="{x:Null}" Destination="[strFullProcessedName]" DisplayName="Move File" sap:VirtualizedContainerService.HintSize="434,196.66666666666666" sap2010:WorkflowViewState.IdRef="MoveFile_1" Path="[strRequestFilePath]" />
                 <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="434,167.33333333333334" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Info" Message="[&quot;Zoho Ticket Created and File Moved to the Processed Folder.&quot;]" />
               </Sequence>
             </ui:IfElseIfV2.Then>
