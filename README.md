@@ -35,3 +35,9 @@ ticket creation page by clicking on the
 this page.
 
 ![tickets page](https://github.com/anmv921/uipath-zoho/blob/main/Data/ZohoProcessScreenshots/01.PNG)
+
+Clicking on the button highlighted in green
+opens the ticket creation form.
+
+![ticket form](https://github.com/anmv921/uipath-zoho/blob/main/Data/ZohoProcessScreenshots/02.PNG)
+
