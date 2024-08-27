@@ -39,6 +39,8 @@ this page.
 Clicking on the button highlighted in green
 opens the ticket creation form.
 
-<img alt="ticket form" 
+<img alt="ticket form 1" 
 src="https://github.com/anmv921/uipath-zoho/blob/main/Data/ZohoProcessScreenshots/02.PNG" width="200" />
 
+<img alt="ticket form 2" 
+src="https://github.com/anmv921/uipath-zoho/blob/main/Data/ZohoProcessScreenshots/03.PNG" width="200" />
