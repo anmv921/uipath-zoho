@@ -39,11 +39,27 @@ this page.
 Clicking on the button highlighted in green
 opens the ticket creation form.
 
-<img alt="ticket form 1" 
-src="https://github.com/anmv921/uipath-zoho/blob/main/Data/ZohoProcessScreenshots/02.PNG" width="200" />
+First we need to type in the name and the email
+and scroll down to type the subject, as 
+shown in the screenshots.
 
-<img alt="ticket form 2" 
-src="https://github.com/anmv921/uipath-zoho/blob/main/Data/ZohoProcessScreenshots/03.PNG" width="200" />
+<img alt="ticket form 1" src="https://github.com/anmv921/uipath-zoho/blob/main/Data/ZohoProcessScreenshots/02.PNG" width="200" /> <img alt="ticket form 2" src="https://github.com/anmv921/uipath-zoho/blob/main/Data/ZohoProcessScreenshots/03.PNG" width="200" />
+
+
+We need to select the status of the newly 
+created ticket - 'Open'.
+
+Other fields are optional and outside of
+scope of this project.
+
+After we have inserted the data obtained from
+the input into the form we can click 
+the submit button, highlighted in green.
+
+
+If the ticket is created successfully then the
+following page is shown:
 
 ![tickets page](https://github.com/anmv921/uipath-zoho/blob/main/Data/ZohoProcessScreenshots/04.PNG)
+
 
