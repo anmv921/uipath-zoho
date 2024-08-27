@@ -62,4 +62,9 @@ following page is shown:
 
 ![tickets page](https://github.com/anmv921/uipath-zoho/blob/main/Data/ZohoProcessScreenshots/04.PNG)
 
+To return to the homepage, we click the '<'
+button, highlighted in green.
 
+That's it!
+
+Happy automation!
