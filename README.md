@@ -43,7 +43,9 @@ First we need to type in the name and the email
 and scroll down to type the subject, as 
 shown in the screenshots.
 
-<img alt="ticket form 1" src="https://github.com/anmv921/uipath-zoho/blob/main/Data/ZohoProcessScreenshots/02.PNG" width="200" /> <img alt="ticket form 2" src="https://github.com/anmv921/uipath-zoho/blob/main/Data/ZohoProcessScreenshots/03.PNG" width="200" />
+<img alt="ticket form 1" src="https://github.com/anmv921/uipath-zoho/blob/main/Data/ZohoProcessScreenshots/02.PNG" width="200" /> 
+
+<img alt="ticket form 2" src="https://github.com/anmv921/uipath-zoho/blob/main/Data/ZohoProcessScreenshots/03.PNG" width="200" />
 
 
 We need to select the status of the newly 
