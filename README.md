@@ -45,9 +45,6 @@ shown in the screenshots.
 
 <img alt="ticket form 1" src="https://github.com/anmv921/uipath-zoho/blob/main/Data/ZohoProcessScreenshots/02.PNG" width="200" /> 
 
-<img alt="ticket form 2" src="https://github.com/anmv921/uipath-zoho/blob/main/Data/ZohoProcessScreenshots/03.PNG" width="200" />
-
-
 We need to select the status of the newly 
 created ticket - 'Open'.
 
@@ -58,6 +55,7 @@ After we have inserted the data obtained from
 the input into the form we can click 
 the submit button, highlighted in green.
 
+<img alt="ticket form 2" src="https://github.com/anmv921/uipath-zoho/blob/main/Data/ZohoProcessScreenshots/03.PNG" width="200" />
 
 If the ticket is created successfully then the
 following page is shown:
