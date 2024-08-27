@@ -1,4 +1,12 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="ZohoClean" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1102,2062.6666666666665" sap2010:WorkflowViewState.IdRef="ZohoClean_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="ZohoClean" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="in_Config" Type="InArgument(scg:Dictionary(x:String, x:Object))" />
+  </x:Members>
+  <VisualBasic.Settings>
+    <x:Null />
+  </VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>1668,2721.3333333333335</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>ZohoClean_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
       <x:String>System.Activities</x:String>
@@ -95,41 +103,63 @@
       <AssemblyReference>PresentationFramework</AssemblyReference>
       <AssemblyReference>WindowsBase</AssemblyReference>
       <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>System.Linq.Async</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="ZohoClean" sap:VirtualizedContainerService.HintSize="1112,1998" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="ZohoClean" sap:VirtualizedContainerService.HintSize="1678,2656.6666666666665" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="ui:UiElement" Name="browser" />
+      <Variable x:TypeArguments="x:String" Name="strPageTitle">
+        <Variable.Default>
+          <Literal x:TypeArguments="x:String">*No Company*</Literal>
+        </Variable.Default>
+      </Variable>
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="1050,176.66666666666666" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;[Zoho] A limpar a página&quot;]" />
-    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Browser Edge: No Company" sap:VirtualizedContainerService.HintSize="1050,1566" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" OpenMode="Never" OutUiElement="[browser]" ScopeGuid="39609fdc-7a04-4c75-b489-289319c2e71e" Version="V2">
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="1616,176.66666666666666" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;[Zoho] A limpar a página&quot;]" />
+    <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="1616,149.33333333333334" sap2010:WorkflowViewState.IdRef="MultipleAssign_1">
+      <ui:MultipleAssign.AssignOperations>
+        <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
+          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_1">
+            <ui:AssignOperation.To>
+              <OutArgument x:TypeArguments="x:String">[strPageTitle]</OutArgument>
+            </ui:AssignOperation.To>
+            <ui:AssignOperation.Value>
+              <InArgument x:TypeArguments="x:String">[in_Config("ZohoTitle").ToString]</InArgument>
+            </ui:AssignOperation.Value>
+          </ui:AssignOperation>
+        </scg:List>
+      </ui:MultipleAssign.AssignOperations>
+    </ui:MultipleAssign>
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Browser Edge - Zoho" sap:VirtualizedContainerService.HintSize="1616,2075.3333333333335" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" OpenMode="Never" OutUiElement="[browser]" ScopeGuid="39609fdc-7a04-4c75-b489-289319c2e71e" Version="V2">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Fazer" sap:VirtualizedContainerService.HintSize="1016,1314.6666666666667" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence DisplayName="Fazer" sap:VirtualizedContainerService.HintSize="1582,1824" sap2010:WorkflowViewState.IdRef="Sequence_2">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <uix:NCheckState DisplayName="Check App State 'Ticket Informações'" sap:VirtualizedContainerService.HintSize="954,664" sap2010:WorkflowViewState.IdRef="NCheckState_4" ScopeIdentifier="39609fdc-7a04-4c75-b489-289319c2e71e" Timeout="5" Version="V3">
+            <uix:NCheckState DisplayName="Check App State 'Ticket Informações'" sap:VirtualizedContainerService.HintSize="1520,1173.3333333333333" sap2010:WorkflowViewState.IdRef="NCheckState_4" ScopeIdentifier="39609fdc-7a04-4c75-b489-289319c2e71e" Timeout="5" Version="V3">
               <uix:NCheckState.IfExists>
-                <Sequence DisplayName="Destino aparece" sap:VirtualizedContainerService.HintSize="450,370.6666666666667" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                <Sequence DisplayName="Destino aparece" sap:VirtualizedContainerService.HintSize="1016,920" sap2010:WorkflowViewState.IdRef="Sequence_3">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <uix:NClick ActivateBefore="True" ClickType="Single" CursorMotionType="Smooth" DisplayName="Click 'Cancelar'" sap:VirtualizedContainerService.HintSize="388,229.33333333333334" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="39609fdc-7a04-4c75-b489-289319c2e71e" Version="V3">
+                  <uix:NClick ActivateBefore="True" ClickType="Single" CursorMotionType="[CursorMotionType.Smooth]" DisplayName="Click 'Cancelar'" sap:VirtualizedContainerService.HintSize="954,229.33333333333334" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="39609fdc-7a04-4c75-b489-289319c2e71e" Version="V3">
                     <uix:NClick.Target>
-                      <uix:TargetAnchorable BrowserURL="https://desk.zoho.eu/agent/nocompany1x1/no-company/tickets/new" CVScreenId="1313f22f-64f4-42cc-983e-ddec5afd23e8" CvElementArea="478, 989, 140, 47" CvTextArea="504, 1002, 87, 19" CvTextArgument="Cancelar" CvType="Button" DesignTimeRectangle="480, 992, 135, 42" DesignTimeScaleFactor="1.5" ElementType="Button" FullSelectorArgument="&lt;webctrl aaname='Cancelar' tag='BUTTON' type='button' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Cancelar' tag='BUTTON' type='button' class='zdr_button_tag zd_v2-button-bold zd_v2266b1e491d zd_v2-button-secondary zd_v2-button-medium zd_v2-button-container zd_v2-button-native zd_v2-button-varClass zd_v24af66c9aeb' check:innerText='Cancelar' /&gt;" Guid="293b7c42-ee3b-4f12-8c43-7436b618d271" InformativeScreenshot="45aa564616a3629880ae28143a2cf9b2.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='No Company' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive" WaitForReadyArgument="Interactive">
+                      <uix:TargetAnchorable BrowserURL="https://desk.zoho.eu/agent/nocompany1x1/no-company/tickets/new" CVScreenId="1313f22f-64f4-42cc-983e-ddec5afd23e8" CvElementArea="478, 989, 140, 47" CvTextArea="504, 1002, 87, 19" CvTextArgument="Cancelar" CvType="Button" DesignTimeRectangle="480, 992, 135, 42" DesignTimeScaleFactor="1.5" ElementType="Button" FullSelectorArgument="&lt;webctrl aaname='Cancelar' tag='BUTTON' type='button' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Cancelar' tag='BUTTON' type='button' class='zdr_button_tag zd_v2-button-bold zd_v2266b1e491d zd_v2-button-secondary zd_v2-button-medium zd_v2-button-container zd_v2-button-native zd_v2-button-varClass zd_v24af66c9aeb' check:innerText='Cancelar' /&gt;" Guid="293b7c42-ee3b-4f12-8c43-7436b618d271" InformativeScreenshot="45aa564616a3629880ae28143a2cf9b2.png" ScopeSelectorArgument="[string.Format(&quot;&lt;html app='msedge.exe' title='{0}' /&gt;&quot;, strPageTitle)]" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive" WaitForReadyArgument="Interactive">
                         <uix:TargetAnchorable.Anchors>
                           <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
                             <uix:Target CVScreenId="1313f22f-64f4-42cc-983e-ddec5afd23e8" CvElementArea="325, 990, 140, 46" CvTextArea="365, 1002, 61, 19" CvTextArgument="Enviar" CvType="Button" DesignTimeRectangle="327, 992, 135, 42" ElementType="Button" FullSelectorArgument="&lt;webctrl aaname='Enviar' tag='BUTTON' type='button' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Enviar' tag='BUTTON' type='button' class='zdr_button_tag zd_v2-button-bold zd_v2266b1e491d zd_v2-button-primaryfilled zd_v2-button-medium zd_v2-button-container zd_v2-button-native zd_v2-button-varClass zd_v24af66c9aeb' check:innerText='Enviar' /&gt;" Guid="616d89c3-a5b7-4434-86df-529f3c469d99" SearchSteps="FuzzySelector, CV" />
@@ -148,7 +178,7 @@
                       </uix:VerifyExecutionOptions>
                     </uix:NClick.VerifyOptions>
                   </uix:NClick>
-                  <uix:NCheckState DisplayName="Check App State 'Não salvo'" sap:VirtualizedContainerService.HintSize="388,50.666666666666664" sap2010:WorkflowViewState.IdRef="NCheckState_2" ScopeIdentifier="39609fdc-7a04-4c75-b489-289319c2e71e" Timeout="5" Version="V3">
+                  <uix:NCheckState DisplayName="Check App State 'Não salvo'" sap:VirtualizedContainerService.HintSize="954,600" sap2010:WorkflowViewState.IdRef="NCheckState_2" ScopeIdentifier="39609fdc-7a04-4c75-b489-289319c2e71e" Timeout="5" Version="V3">
                     <uix:NCheckState.IfExists>
                       <Sequence DisplayName="Destino aparece" sap:VirtualizedContainerService.HintSize="450,313.3333333333333" sap2010:WorkflowViewState.IdRef="Sequence_5">
                         <sap:WorkflowViewStateService.ViewState>
@@ -156,9 +186,9 @@
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
-                        <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Sim, deixar a página'" sap:VirtualizedContainerService.HintSize="388,222.66666666666666" sap2010:WorkflowViewState.IdRef="NClick_2" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="39609fdc-7a04-4c75-b489-289319c2e71e" Version="V3">
+                        <uix:NClick ActivateBefore="True" ClickType="Single" CursorMotionType="Smooth" DisplayName="Click 'Sim, deixar a página'" sap:VirtualizedContainerService.HintSize="388,222.66666666666666" sap2010:WorkflowViewState.IdRef="NClick_2" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="39609fdc-7a04-4c75-b489-289319c2e71e" Version="V3">
                           <uix:NClick.Target>
-                            <uix:TargetAnchorable BrowserURL="https://desk.zoho.eu/agent/nocompany1x1/no-company/tickets/new" CVScreenId="2e249eb5-4054-412b-9ae2-e6090970d11a" CvElementArea="755, 472, 245, 47" CvTextArea="780, 485, 195, 22" CvTextArgument="Sim, Deixar A Pagina" CvType="Button" DesignTimeRectangle="758, 475, 240, 42" DesignTimeScaleFactor="1.5" ElementType="Button" FullSelectorArgument="&lt;webctrl id='ZD_76' tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl id='ZD_76' tag='BUTTON' type='button' class='zdr_button_tag zd_v2-button-bold zd_v2266b1e491d zd_v2-button-dangerfilled zd_v2-button-medium zd_v2-button-container zd_v2-button-native zd_v2-button-varClass zd_v24af66c9aeb' aaname='Sim, deixar a página' check:innerText='Sim, Deixar A Página' /&gt;" Guid="98ac614c-9948-4d04-bf20-7dadbcbd833c" InformativeScreenshot="7043799845e43fa4a719c1a29be23ab9.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='No Company' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive">
+                            <uix:TargetAnchorable BrowserURL="https://desk.zoho.eu/agent/nocompany1x1/no-company/tickets/new" CVScreenId="2e249eb5-4054-412b-9ae2-e6090970d11a" CvElementArea="755, 472, 245, 47" CvTextArea="780, 485, 195, 22" CvTextArgument="Sim, Deixar A Pagina" CvType="Button" DesignTimeRectangle="758, 475, 240, 42" DesignTimeScaleFactor="1.5" ElementType="Button" FullSelectorArgument="&lt;webctrl id='ZD_76' tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl id='ZD_76' tag='BUTTON' type='button' class='zdr_button_tag zd_v2-button-bold zd_v2266b1e491d zd_v2-button-dangerfilled zd_v2-button-medium zd_v2-button-container zd_v2-button-native zd_v2-button-varClass zd_v24af66c9aeb' aaname='Sim, deixar a página' check:innerText='Sim, Deixar A Página' /&gt;" Guid="98ac614c-9948-4d04-bf20-7dadbcbd833c" InformativeScreenshot="7043799845e43fa4a719c1a29be23ab9.png" ScopeSelectorArgument="[string.Format(&quot;&lt;html app='msedge.exe' title='{0}' /&gt;&quot;, strPageTitle)]" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive" WaitForReadyArgument="Interactive">
                               <uix:TargetAnchorable.Anchors>
                                 <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
                                   <uix:Target CVScreenId="2e249eb5-4054-412b-9ae2-e6090970d11a" CvElementArea="1014, 472, 146, 47" CvTextArea="1040, 486, 94, 21" CvTextArgument="Ficar Aqui" CvType="Button" DesignTimeRectangle="1016, 475, 142, 42" ElementType="Button" FullSelectorArgument="&lt;webctrl id='ZD_77' tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl id='ZD_77' tag='BUTTON' type='button' class='zdr_button_tag zd_v2-button-bold zd_v2266b1e491d zd_v2-button-secondary zd_v2-button-medium zd_v2-button-container zd_v2-button-native zd_v2-button-varClass zd_v24af66c9aeb' aaname='Ficar aqui' check:innerText='Ficar Aqui' /&gt;" Guid="c68870a5-ca94-4c40-b05e-e8f9d38bb9e9" SearchSteps="FuzzySelector, CV" />
@@ -189,11 +219,11 @@
                       </Sequence>
                     </uix:NCheckState.IfNotExists>
                     <uix:NCheckState.Target>
-                      <uix:TargetAnchorable BrowserURL="https://desk.zoho.eu/agent/nocompany1x1/no-company/tickets/new" CVScreenId="2ae39061-2a2a-45ce-b1cf-f67432a62421" CvTextArea="833, 275, 127, 25" CvTextArgument="Nao salvo" CvType="Text" DesignTimeRectangle="834, 274, 125, 33" DesignTimeScaleFactor="1.5" ElementType="Text" FullSelectorArgument="&lt;webctrl id='ZD_75' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl id='ZD_75' tag='DIV' type='' class='zd_v2-alertheadernew-title zd_v2266b1e491d zd_v26a70202f26 zd_v2a4cf259821' aaname='Não salvo' check:innerText='Não salvo' /&gt;" Guid="a2877b65-7029-4b1f-bc3a-26948f8b7902" InformativeScreenshot="16cdcf22c5858ded2efcdbe29585ad27.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='No Company' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive" WaitForReadyArgument="Interactive" />
+                      <uix:TargetAnchorable BrowserURL="https://desk.zoho.eu/agent/nocompany1x1/no-company/tickets/new" CVScreenId="2ae39061-2a2a-45ce-b1cf-f67432a62421" CvTextArea="833, 275, 127, 25" CvTextArgument="Nao salvo" CvType="Text" DesignTimeRectangle="834, 274, 125, 33" DesignTimeScaleFactor="1.5" ElementType="Text" FullSelectorArgument="&lt;webctrl id='ZD_75' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl id='ZD_75' tag='DIV' type='' class='zd_v2-alertheadernew-title zd_v2266b1e491d zd_v26a70202f26 zd_v2a4cf259821' aaname='Não salvo' check:innerText='Não salvo' /&gt;" Guid="a2877b65-7029-4b1f-bc3a-26948f8b7902" InformativeScreenshot="16cdcf22c5858ded2efcdbe29585ad27.png" ScopeSelectorArgument="[string.Format(&quot;&lt;html app='msedge.exe' title='{0}' /&gt;&quot;, strPageTitle)]" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive" WaitForReadyArgument="Interactive" />
                     </uix:NCheckState.Target>
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                         <x:Boolean x:Key="IsPinned">False</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
@@ -210,7 +240,7 @@
                 </Sequence>
               </uix:NCheckState.IfNotExists>
               <uix:NCheckState.Target>
-                <uix:TargetAnchorable BrowserURL="https://desk.zoho.eu/agent/nocompany1x1/no-company/tickets/new" CVScreenId="3ddd8589-baaf-4e91-a4dc-ab26b80f53c0" CvTextArea="386, 429, 244, 30" CvTextArgument="Ticket Informacoes" CvType="Text" DesignTimeRectangle="387, 428, 242, 31" DesignTimeScaleFactor="1.5" ElementType="Text" FullSelectorArgument="&lt;webctrl tag='H2' /&gt;" FuzzyAccuracy="1" FuzzySelectorArgument="&lt;webctrl tag='H2' type='' class='zdr_h2_tag zd_v2-heading-reset zd_v2-addform-sectionHeading zd_v26a70202f26 zd_v2266b1e491d zd_v2-addform-inlineBlockMid' aaname='Ticket Informações' check:innerText='Ticket Informações' /&gt;" Guid="6799b8d0-3781-447c-9f60-b413b426745f" ImageBase64="" InformativeScreenshot="ce8011981ac025f84e6755c9f44601f3.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='*No Company*' /&gt;" SearchSteps="FuzzySelector" Version="V4" Visibility="Interactive" WaitForReadyArgument="Interactive" />
+                <uix:TargetAnchorable BrowserURL="https://desk.zoho.eu/agent/nocompany1x1/no-company/tickets/new" CVScreenId="3ddd8589-baaf-4e91-a4dc-ab26b80f53c0" CvTextArea="386, 429, 244, 30" CvTextArgument="Ticket Informacoes" CvType="Text" DesignTimeRectangle="387, 428, 242, 31" DesignTimeScaleFactor="1.5" ElementType="Text" FullSelectorArgument="&lt;webctrl tag='H2' /&gt;" FuzzyAccuracy="1" FuzzySelectorArgument="&lt;webctrl tag='H2' type='' class='zdr_h2_tag zd_v2-heading-reset zd_v2-addform-sectionHeading zd_v26a70202f26 zd_v2266b1e491d zd_v2-addform-inlineBlockMid' aaname='Ticket Informações' check:innerText='Ticket Informações' /&gt;" Guid="6799b8d0-3781-447c-9f60-b413b426745f" ImageBase64="" InformativeScreenshot="ce8011981ac025f84e6755c9f44601f3.png" ScopeSelectorArgument="[string.Format(&quot;&lt;html app='msedge.exe' title='{0}' /&gt;&quot;, strPageTitle)]" SearchSteps="FuzzySelector" Version="V4" Visibility="Interactive" WaitForReadyArgument="Interactive" />
               </uix:NCheckState.Target>
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -219,7 +249,7 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </uix:NCheckState>
-            <uix:NCheckState DisplayName="Check App State 'Ticket Propriedades'" sap:VirtualizedContainerService.HintSize="954,560" sap2010:WorkflowViewState.IdRef="NCheckState_3" ScopeIdentifier="39609fdc-7a04-4c75-b489-289319c2e71e" Timeout="5" Version="V3">
+            <uix:NCheckState DisplayName="Check App State 'Ticket Propriedades'" sap:VirtualizedContainerService.HintSize="1520,560" sap2010:WorkflowViewState.IdRef="NCheckState_3" ScopeIdentifier="39609fdc-7a04-4c75-b489-289319c2e71e" Timeout="5" Version="V3">
               <uix:NCheckState.IfExists>
                 <Sequence DisplayName="Destino aparece" sap:VirtualizedContainerService.HintSize="450,313.3333333333333" sap2010:WorkflowViewState.IdRef="Sequence_7">
                   <sap:WorkflowViewStateService.ViewState>
@@ -229,9 +259,9 @@
                   </sap:WorkflowViewStateService.ViewState>
                   <uix:NClick ActivateBefore="True" ClickType="Single" CursorMotionType="Smooth" DisplayName="Click 'Ticket Propriedades'" sap:VirtualizedContainerService.HintSize="388,222.66666666666666" sap2010:WorkflowViewState.IdRef="NClick_3" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="39609fdc-7a04-4c75-b489-289319c2e71e" Version="V3">
                     <uix:NClick.Target>
-                      <uix:TargetAnchorable BrowserURL="https://desk.zoho.eu/agent/nocompany1x1/no-company/tickets/details/179834000000265001" DesignTimeRectangle="308, 327, 20, 19" DesignTimeScaleFactor="1.5" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;desk&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;aside&amp;gt;div&amp;gt;div&amp;gt;button&amp;gt;i' isleaf='1' tag='I' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' isleaf='1' tag='I' class='zd_font_icons zd_v213bca50f0a zd_v2c63ab4c337 zd_v28356439d31 zd_v2b7664e0921' aaname='' /&gt;" Guid="0875feb8-8bb4-4220-97f7-6ca2012880ea" InformativeScreenshot="b00db2d9bf5232925d1c2a0ef637875d.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='(1) #101 - No Company' /&gt;" SearchSteps="FuzzySelector" Version="V4" Visibility="Interactive" WaitForReadyArgument="Interactive">
+                      <uix:TargetAnchorable BrowserURL="https://desk.zoho.eu/agent/nocompany1x1/no-company/tickets/details/179834000000265001" DesignTimeRectangle="308, 327, 20, 19" DesignTimeScaleFactor="1.5" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;desk&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;aside&amp;gt;div&amp;gt;div&amp;gt;button&amp;gt;i' isleaf='1' tag='I' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' isleaf='1' tag='I' class='zd_font_icons zd_v213bca50f0a zd_v2c63ab4c337 zd_v28356439d31 zd_v2b7664e0921' aaname='' /&gt;" Guid="0875feb8-8bb4-4220-97f7-6ca2012880ea" InformativeScreenshot="b00db2d9bf5232925d1c2a0ef637875d.png" ScopeSelectorArgument="[string.Format(&quot;&lt;html app='msedge.exe' title='{0}' /&gt;&quot;, strPageTitle)]" SearchSteps="FuzzySelector" Version="V4" Visibility="Interactive" WaitForReadyArgument="Interactive">
                         <uix:TargetAnchorable.Anchors>
-                          <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                          <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
                             <uix:Target CVScreenId="f9d357cf-7b2f-4a94-b99d-b1a0782db6b8" CvTextArea="822, 324, 217, 25" CvTextArgument="Ticket Propriedades" CvType="Text" DesignTimeRectangle="824, 324, 334, 26" ElementType="Text" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;desk&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;aside&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;h1' tag='H1' /&gt;" FuzzyAccuracy="1" FuzzySelectorArgument="&lt;webctrl type='' tag='H1' class='zdr_h1_tag zd_v2-heading-reset zd_v2-sectionheader-headingBox zd_v24af66c9aeb' aaname='Ticket Propriedades' check:innerText='Ticket Propriedades' /&gt;" Guid="96e946a6-d588-42a2-b9a9-9c8f759cd96e" ImageBase64="" SearchSteps="FuzzySelector" />
                           </scg:List>
                         </uix:TargetAnchorable.Anchors>
@@ -260,14 +290,14 @@
                 </Sequence>
               </uix:NCheckState.IfNotExists>
               <uix:NCheckState.Target>
-                <uix:TargetAnchorable BrowserURL="https://desk.zoho.eu/agent/nocompany1x1/no-company/tickets/details/179834000000265001" CVScreenId="3c0d6ac8-1c7b-4385-8721-9e253520b57b" CvTextArea="822, 324, 217, 25" CvTextArgument="Ticket Propriedades" CvType="Text" DesignTimeRectangle="824, 324, 334, 26" DesignTimeScaleFactor="1.5" ElementType="Text" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;desk&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;aside&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;h1' tag='H1' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' tag='H1' class='zdr_h1_tag zd_v2-heading-reset zd_v2-sectionheader-headingBox zd_v24af66c9aeb' aaname='Ticket Propriedades' check:innerText='Ticket Propriedades' /&gt;" Guid="af1c46e3-100b-4292-88de-8dd66a3784ea" InformativeScreenshot="32e7ff8620d254f43ca39f10877f8768.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='*No Company*' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive" WaitForReadyArgument="Interactive" />
+                <uix:TargetAnchorable BrowserURL="https://desk.zoho.eu/agent/nocompany1x1/no-company/tickets/details/179834000000265001" CVScreenId="3c0d6ac8-1c7b-4385-8721-9e253520b57b" CvTextArea="822, 324, 217, 25" CvTextArgument="Ticket Propriedades" CvType="Text" DesignTimeRectangle="824, 324, 334, 26" DesignTimeScaleFactor="1.5" ElementType="Text" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;desk&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;aside&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;h1' tag='H1' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' tag='H1' class='zdr_h1_tag zd_v2-heading-reset zd_v2-sectionheader-headingBox zd_v24af66c9aeb' aaname='Ticket Propriedades' check:innerText='Ticket Propriedades' /&gt;" Guid="af1c46e3-100b-4292-88de-8dd66a3784ea" InformativeScreenshot="32e7ff8620d254f43ca39f10877f8768.png" ScopeSelectorArgument="[string.Format(&quot;&lt;html app='msedge.exe' title='{0}' /&gt;&quot;, strPageTitle)]" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive" WaitForReadyArgument="Interactive" />
               </uix:NCheckState.Target>
             </uix:NCheckState>
           </Sequence>
         </ActivityAction>
       </uix:NApplicationCard.Body>
       <uix:NApplicationCard.TargetApp>
-        <uix:TargetApp Area="1909, -11, 1942, 1102" BrowserType="Edge" IconBase64="iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAAKHSURBVDhPhZPtS5NRGMYlC6GIgqh/oL70tRd6xTKyPhSB9CXog5EV5tRlpYsSEgTBysKyDKtVEKlMp9uojEjH3ObLJEW3ls5cb3PTLefUvbjHPVf3OTvSB3u54Dee5z7XdXN27vOk/EsANkuJhZ5ANCRPRIJgzMbpB7hDrBG2v4tMpTq3BXtblNjXWoT0lgvIaruOvskRidYUwvZnkWEZ0VDYWYMzHbfQ7fsIs3cIp9pvIM9UTUtoIVYI+1LR4qp4Quo83laGQ4YS6N1WFkKZ7TkUprvssZFIFfakqLCS2EJkEkeI3jdfe3H01TUc0F3GXDyK7PeVqBrQ0BIqRCwpKqxPyPJT94w32O1zxmjLsZ4J50K/fxQlXXU4+a4Cofkw3412rJM1yBHRpKhQZPQMyLu1BWCwg9ujLeRs05zHs09v8W12AjuaFbBNDkfInyGiPJxKaPLpvynNNXDP+NDvd8EXmeL4o9MY+unmB5ipL6FxTn0n/yYR5w3WhqWY7djrUtS72mEn80F9MZo+mxCMzaLWrsf2pjycM97GyDTL4h6xXMR5g42eucAPtm2L1w46C77lrZpc7GouQIbuElrHLDCND9IdGGYNropoUlRI/+B3hXc259P2vczAZfU58NBhwHg4wN9z6D5U9jewx5simhQVsnVuq8y2PRMPM8MShaUoDhtUaBw1stdcEU2KCuXVg1qwS9Po6oCKxsZGt4iq6xHOGqv4OTimvsyRf7+I8jCbwEul+T7WqbP42IosD3CFQouwBqU9anTQmOl86sm/WsR5gzRZlg3lfS9w0VKL0ZCHfW3snj8mngjURB2hIDaI6G9R8XREigXnE5KTnk8QaWLpP0pJ+QXgDlI/XSFonAAAAABJRU5ErkJggg==" InformativeScreenshot="2545df41a3a6dbe203f0c0285457f7ab.jpg" Selector="&lt;html app='msedge.exe' title='No Company' /&gt;" Title="No Company" Url="https://desk.zoho.eu/agent/nocompany1x1/no-company/*" />
+        <uix:TargetApp Area="1909, -11, 1942, 1102" BrowserType="Edge" IconBase64="iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAAKHSURBVDhPhZPtS5NRGMYlC6GIgqh/oL70tRd6xTKyPhSB9CXog5EV5tRlpYsSEgTBysKyDKtVEKlMp9uojEjH3ObLJEW3ls5cb3PTLefUvbjHPVf3OTvSB3u54Dee5z7XdXN27vOk/EsANkuJhZ5ANCRPRIJgzMbpB7hDrBG2v4tMpTq3BXtblNjXWoT0lgvIaruOvskRidYUwvZnkWEZ0VDYWYMzHbfQ7fsIs3cIp9pvIM9UTUtoIVYI+1LR4qp4Quo83laGQ4YS6N1WFkKZ7TkUprvssZFIFfakqLCS2EJkEkeI3jdfe3H01TUc0F3GXDyK7PeVqBrQ0BIqRCwpKqxPyPJT94w32O1zxmjLsZ4J50K/fxQlXXU4+a4Cofkw3412rJM1yBHRpKhQZPQMyLu1BWCwg9ujLeRs05zHs09v8W12AjuaFbBNDkfInyGiPJxKaPLpvynNNXDP+NDvd8EXmeL4o9MY+unmB5ipL6FxTn0n/yYR5w3WhqWY7djrUtS72mEn80F9MZo+mxCMzaLWrsf2pjycM97GyDTL4h6xXMR5g42eucAPtm2L1w46C77lrZpc7GouQIbuElrHLDCND9IdGGYNropoUlRI/+B3hXc259P2vczAZfU58NBhwHg4wN9z6D5U9jewx5simhQVsnVuq8y2PRMPM8MShaUoDhtUaBw1stdcEU2KCuXVg1qwS9Po6oCKxsZGt4iq6xHOGqv4OTimvsyRf7+I8jCbwEul+T7WqbP42IosD3CFQouwBqU9anTQmOl86sm/WsR5gzRZlg3lfS9w0VKL0ZCHfW3snj8mngjURB2hIDaI6G9R8XREigXnE5KTnk8QaWLpP0pJ+QXgDlI/XSFonAAAAABJRU5ErkJggg==" InformativeScreenshot="2545df41a3a6dbe203f0c0285457f7ab.jpg" Selector="[string.Format(&quot;&lt;html app='msedge.exe' title='{0}' /&gt;&quot;, strPageTitle)]" Title="No Company" Url="https://desk.zoho.eu/agent/*" />
       </uix:NApplicationCard.TargetApp>
     </uix:NApplicationCard>
     <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="1050,167.33333333333334" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;[Zoho] Fim da limpeza da página&quot;]" />
