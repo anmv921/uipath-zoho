@@ -20,7 +20,7 @@ machine.
 Zoho is a web application which follows
 the SaaS model and provides a 
 time-limited trial, available after
-sign-up at https://desk.zoho.com.
+sign-up at <https://desk.zoho.com>.
 
 ## Input
 
@@ -154,7 +154,9 @@ be seen in the following video:
 
 ***
 
-## TODO
+<details>
+
+<summary>TODO</summary>
 
 - Add other fields to Zoho form
 - Add a loop for multiple ticket creation
@@ -164,3 +166,5 @@ be seen in the following video:
 to config values.
 - Add a login workflow
 - Draw.io diagram
+
+</details>
