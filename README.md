@@ -5,9 +5,13 @@ allows us to automatically generate a
 ticket in the Zoho helpdesk software from an
 Excel file.
 
-The project follows the book
-**Robotic Process Automation Projects**
-by _Nandan Mullakara_.
+The implementation mostly follows the book
+**'Robotic Process Automation Projects'**
+by _Nandan Mullakara_, with some improvements
+added based on personal experience. Besides,
+this automation is built with the modern UI
+automation selectors as opposed to the book,
+which uses the classic selectors.
 
 Zoho is a web application which follows
 the SaaS model and provides a 
