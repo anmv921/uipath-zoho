@@ -163,3 +163,4 @@ be seen in the following video:
 - Change the relevant variables to assets as opposed
 to config values.
 - Add a login workflow
+- Draw.io diagram
