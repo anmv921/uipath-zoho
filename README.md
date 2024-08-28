@@ -5,7 +5,7 @@ allows us to automatically generate a
 ticket in the Zoho helpdesk software from an
 Excel file.
 
-The projects follows the book
+The project follows the book
 **Robotic Process Automation Projects**
 by _Nandan Mullakara_.
 
