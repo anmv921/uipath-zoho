@@ -143,3 +143,12 @@ be seen in the following video:
 ***That's it!***
 
 ***Happy automation!***
+
+***
+
+## TODO
+
+- Add other fields to Zoho form
+- Add a loop for multiple ticket creation
+- Convert the project to reframework
+- Add annotations and logs
