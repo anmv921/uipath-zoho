@@ -11,7 +11,11 @@ by _Nandan Mullakara_, with some improvements
 added based on personal experience. Besides,
 this automation is built with the modern UI
 automation selectors as opposed to the book,
-which uses the classic selectors.
+which uses the classic selectors. Furthermore,
+this implementation of the automation is an unattended
+automation and not an attended one, meaning it is built
+to run without direct supervision on a virtual Windows
+machine.
 
 Zoho is a web application which follows
 the SaaS model and provides a 
@@ -32,13 +36,13 @@ creation. The fields are then:
 - Contact email
 - Ticket subject
 
-The file location can be configured in
+The file location can be set in
 Config.xlsx, located in the Data
 folder.
 
 ## Zoho automation
 
-The zoho automation is composed of a few
+The Zoho automation is composed of a few
 steps.
 
 First, the Zoho homepage must be open, and
