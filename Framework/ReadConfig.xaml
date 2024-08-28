@@ -135,7 +135,7 @@
         </scg:List>
       </ui:MultipleAssign.AssignOperations>
     </ui:MultipleAssign>
-    <ueab:ExcelProcessScopeX LaunchTimeout="{x:Null}" DisplayAlerts="False" DisplayName="Excel Process Scope" ExistingProcessAction="ForceKill" FileConflictResolution="ThrowException" sap:VirtualizedContainerService.HintSize="642,1242" sap2010:WorkflowViewState.IdRef="ExcelProcessScopeX_1" LaunchMethod="Automation" MacroSettings="DisableAll" ProcessMode="ReuseIfExists" ShowExcelWindow="False">
+    <ueab:ExcelProcessScopeX LaunchTimeout="{x:Null}" DisplayAlerts="False" DisplayName="Excel Process Scope" ExistingProcessAction="ForceKill" FileConflictResolution="ThrowException" sap:VirtualizedContainerService.HintSize="642,1242" sap2010:WorkflowViewState.IdRef="ExcelProcessScopeX_1" LaunchMethod="Automation" MacroSettings="DisableAll" ProcessMode="ReuseIfExists" ShowExcelWindow="True">
       <ueab:ExcelProcessScopeX.Body>
         <ActivityAction x:TypeArguments="ui:IExcelProcess">
           <ActivityAction.Argument>
@@ -147,7 +147,7 @@
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ueab:ExcelApplicationCard Password="{x:Null}" CreateNewFile="False" DisplayName="Use Excel File" sap:VirtualizedContainerService.HintSize="546,1034.6666666666667" sap2010:WorkflowViewState.IdRef="ExcelApplicationCard_1" ReadFormatting="RawValue" ReadOnly="True" ResizeWindow="None" WorkbookPath="Data\Config.xlsx">
+            <ueab:ExcelApplicationCard Password="{x:Null}" CreateNewFile="False" DisplayName="Use Excel File" sap:VirtualizedContainerService.HintSize="546,1034.6666666666667" sap2010:WorkflowViewState.IdRef="ExcelApplicationCard_1" ReadFormatting="RawValue" ReadOnly="True" ResizeWindow="Maximize" WorkbookPath="Data\Config.xlsx">
               <ueab:ExcelApplicationCard.Body>
                 <ActivityAction x:TypeArguments="ue:IWorkbookQuickHandle">
                   <ActivityAction.Argument>
@@ -176,12 +176,8 @@
                               <InvokeMethod.TargetObject>
                                 <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)">[out_Config]</InArgument>
                               </InvokeMethod.TargetObject>
-                              <InArgument x:TypeArguments="x:String">
-                                <VisualBasicValue x:TypeArguments="x:String" ExpressionText="CurrentRow(&quot;Key&quot;).ToString" />
-                              </InArgument>
-                              <InArgument x:TypeArguments="x:Object">
-                                <VisualBasicValue x:TypeArguments="x:Object" ExpressionText="CurrentRow(&quot;Value&quot;).ToString" />
-                              </InArgument>
+                              <InArgument x:TypeArguments="x:String">[CurrentRow("Key").ToString]</InArgument>
+                              <InArgument x:TypeArguments="x:Object">[CurrentRow("Value").ToString]</InArgument>
                             </InvokeMethod>
                           </Sequence>
                         </ActivityAction>
