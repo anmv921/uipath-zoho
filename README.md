@@ -150,5 +150,5 @@ be seen in the following video:
 
 - Add other fields to Zoho form
 - Add a loop for multiple ticket creation
-- Convert the project to reframework
+- Convert the project to REFramework
 - Add annotations and logs
