@@ -160,3 +160,6 @@ be seen in the following video:
 - Add a loop for multiple ticket creation
 - Convert the project to REFramework
 - Add annotations and logs
+- Change the relevant variables to assets as opposed
+to config values.
+- Add a login workflow
