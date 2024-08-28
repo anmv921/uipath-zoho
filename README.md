@@ -136,8 +136,10 @@ components:
 The results of the RPA program can
 be seen in the following video:
 
+
+
 ***
 
 ***That's it!***
 
-**Happy automation!**
+***Happy automation!***
