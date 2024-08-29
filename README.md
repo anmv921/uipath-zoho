@@ -166,5 +166,7 @@ be seen in the following video:
 to config values.
 - Add a login workflow
 - Draw.io diagram
+- Publish and run from Orchestrator on a
+virtual desktop
 
 </details>
