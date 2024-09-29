@@ -94,7 +94,7 @@
       <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="688,3705.3333333333335" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="655.9999999999999,3738" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:Boolean" Name="boolFileExists" />
       <Variable x:TypeArguments="x:String" Name="strRequestFilePath" />
@@ -109,8 +109,8 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:Comment sap:VirtualizedContainerService.HintSize="626,108" sap2010:WorkflowViewState.IdRef="Comment_1" Text="Create a Zoho desk Ticket from the Request excel file" />
-    <Assign DisplayName="Assign - Init Config" sap:VirtualizedContainerService.HintSize="626,117.33333333333333" sap2010:WorkflowViewState.IdRef="Assign_2">
+    <ui:Comment sap:VirtualizedContainerService.HintSize="570,108" sap2010:WorkflowViewState.IdRef="Comment_1" Text="Create a Zoho desk Ticket from the Request excel file" />
+    <Assign DisplayName="Assign - Init Config" sap:VirtualizedContainerService.HintSize="570,117.33333333333333" sap2010:WorkflowViewState.IdRef="Assign_2">
       <Assign.To>
         <OutArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)">[Config]</OutArgument>
       </Assign.To>
@@ -118,12 +118,12 @@
         <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)">[New Dictionary(Of String, Object)]</InArgument>
       </Assign.Value>
     </Assign>
-    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="ReadConfig - Invoke Workflow File (Framework\ReadConfig.xaml)" sap:VirtualizedContainerService.HintSize="626,210" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="Framework\ReadConfig.xaml">
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="ReadConfig - Invoke Workflow File (Framework\ReadConfig.xaml)" sap:VirtualizedContainerService.HintSize="570,210" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="Framework\ReadConfig.xaml">
       <ui:InvokeWorkflowFile.Arguments>
         <OutArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="out_Config">[Config]</OutArgument>
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>
-    <ui:MultipleAssign DisplayName="Multiple Assign - Init Vars" sap:VirtualizedContainerService.HintSize="626,272" sap2010:WorkflowViewState.IdRef="MultipleAssign_1">
+    <ui:MultipleAssign DisplayName="Multiple Assign - Init Vars" sap:VirtualizedContainerService.HintSize="570,272" sap2010:WorkflowViewState.IdRef="MultipleAssign_1">
       <ui:MultipleAssign.AssignOperations>
         <scg:List x:TypeArguments="ui:AssignOperation" Capacity="8">
           <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_1">
@@ -175,7 +175,7 @@
         </scg:List>
       </ui:MultipleAssign.AssignOperations>
     </ui:MultipleAssign>
-    <Assign sap:VirtualizedContainerService.HintSize="626,117.33333333333333" sap2010:WorkflowViewState.IdRef="Assign_1">
+    <Assign sap:VirtualizedContainerService.HintSize="570,117.33333333333333" sap2010:WorkflowViewState.IdRef="Assign_1">
       <Assign.To>
         <OutArgument x:TypeArguments="x:Boolean">[boolFileExists]</OutArgument>
       </Assign.To>
@@ -183,17 +183,17 @@
         <InArgument x:TypeArguments="x:Boolean">False</InArgument>
       </Assign.Value>
     </Assign>
-    <ui:PathExists Resource="{x:Null}" DisplayName="Path Exists" Exists="[boolFileExists]" sap:VirtualizedContainerService.HintSize="626,150.66666666666666" sap2010:WorkflowViewState.IdRef="PathExists_1" Path="[strRequestFilePath]" PathType="File" />
-    <If Condition="[boolFileExists]" sap:VirtualizedContainerService.HintSize="626,2642" sap2010:WorkflowViewState.IdRef="If_1">
+    <ui:PathExists Resource="{x:Null}" DisplayName="Path Exists" Exists="[boolFileExists]" sap:VirtualizedContainerService.HintSize="570,150.66666666666666" sap2010:WorkflowViewState.IdRef="PathExists_1" Path="[strRequestFilePath]" PathType="File" />
+    <If Condition="[boolFileExists]" sap:VirtualizedContainerService.HintSize="570,2740" sap2010:WorkflowViewState.IdRef="If_1">
       <If.Then>
-        <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="592,2224" sap2010:WorkflowViewState.IdRef="Sequence_2">
+        <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="536,2350" sap2010:WorkflowViewState.IdRef="Sequence_2">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="530,176.66666666666666" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Request available, RPA will start creating the ticket&quot;]" />
-          <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="ReadRequestExcel - Invoke Workflow File (Workflow\ReadRequestExcel.xaml)" sap:VirtualizedContainerService.HintSize="530,210" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Workflow\ReadRequestExcel.xaml">
+          <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="502,176.66666666666666" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Request available, RPA will start creating the ticket&quot;]" />
+          <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="ReadRequestExcel - Invoke Workflow File (Workflow\ReadRequestExcel.xaml)" sap:VirtualizedContainerService.HintSize="502,210" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Workflow\ReadRequestExcel.xaml">
             <ui:InvokeWorkflowFile.Arguments>
               <InArgument x:TypeArguments="x:String" x:Key="in_strRequestFilePath">[strRequestFilePath]</InArgument>
               <OutArgument x:TypeArguments="x:String" x:Key="out_strContactName">[strContactName]</OutArgument>
@@ -201,13 +201,13 @@
               <OutArgument x:TypeArguments="x:String" x:Key="out_strSubject">[strSubject]</OutArgument>
             </ui:InvokeWorkflowFile.Arguments>
           </ui:InvokeWorkflowFile>
-          <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="530,176.66666666666666" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info" Message="[&quot;Name - &quot; + strContactName + &quot; | Email - &quot; + strEmail + &quot; | Subject - &quot; + strSubject]" />
-          <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="ZohoClean - Invoke Workflow File (Workflow\ZohoClean.xaml)" sap:VirtualizedContainerService.HintSize="530,210" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_3" UnSafe="False" WorkflowFileName="Workflow\ZohoClean.xaml">
+          <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="502,176.66666666666666" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info" Message="[&quot;Name - &quot; + strContactName + &quot; | Email - &quot; + strEmail + &quot; | Subject - &quot; + strSubject]" />
+          <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="ZohoClean - Invoke Workflow File (Workflow\ZohoClean.xaml)" sap:VirtualizedContainerService.HintSize="502,210" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_3" UnSafe="False" WorkflowFileName="Workflow\ZohoClean.xaml">
             <ui:InvokeWorkflowFile.Arguments>
               <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="in_Config">[Config]</InArgument>
             </ui:InvokeWorkflowFile.Arguments>
           </ui:InvokeWorkflowFile>
-          <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="ZohoAutomation - Invoke Workflow File (Workflow\ZohoAutomation.xaml)" sap:VirtualizedContainerService.HintSize="530,210" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_4" UnSafe="False" WorkflowFileName="Workflow\ZohoAutomation.xaml">
+          <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="ZohoAutomation - Invoke Workflow File (Workflow\ZohoAutomation.xaml)" sap:VirtualizedContainerService.HintSize="502,210" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_4" UnSafe="False" WorkflowFileName="Workflow\ZohoAutomation.xaml">
             <ui:InvokeWorkflowFile.Arguments>
               <InArgument x:TypeArguments="x:String" x:Key="in_strEmail">[strEmail]</InArgument>
               <InArgument x:TypeArguments="x:String" x:Key="in_strSubject">[strSubject]</InArgument>
@@ -216,22 +216,22 @@
               <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="in_Config">[Config]</InArgument>
             </ui:InvokeWorkflowFile.Arguments>
           </ui:InvokeWorkflowFile>
-          <ui:IfElseIfV2 Condition="[boolTicketCreated]" DisplayName="Else If" sap:VirtualizedContainerService.HintSize="530,1152.6666666666667" sap2010:WorkflowViewState.IdRef="IfElseIfV2_1">
+          <ui:IfElseIfV2 Condition="[boolTicketCreated]" DisplayName="Else If" sap:VirtualizedContainerService.HintSize="502,1306.6666666666667" sap2010:WorkflowViewState.IdRef="IfElseIfV2_1">
             <ui:IfElseIfV2.Else>
-              <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,255.33333333333334" sap2010:WorkflowViewState.IdRef="Sequence_5">
+              <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,227.33333333333334" sap2010:WorkflowViewState.IdRef="Sequence_5">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
-                <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="354,167.33333333333334" sap2010:WorkflowViewState.IdRef="LogMessage_5" Level="Error" Message="[&quot;Zoho Ticket not created and file is not processed yet. Please check the input request file and reprocess the same request&quot;]" />
+                <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="382,167.33333333333334" sap2010:WorkflowViewState.IdRef="LogMessage_5" Level="Error" Message="[&quot;Zoho Ticket not created and file is not processed yet. Please check the input request file and reprocess the same request&quot;]" />
               </Sequence>
             </ui:IfElseIfV2.Else>
             <ui:IfElseIfV2.ElseIfs>
               <sc:BindingList x:TypeArguments="ui:IfElseIfBlock" AllowEdit="True" AllowNew="True" AllowRemove="True" RaiseListChangedEvents="True" />
             </ui:IfElseIfV2.ElseIfs>
             <ui:IfElseIfV2.Then>
-              <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="496,686.6666666666666" sap2010:WorkflowViewState.IdRef="Sequence_4">
+              <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="468,868.6666666666666" sap2010:WorkflowViewState.IdRef="Sequence_4">
                 <Sequence.Variables>
                   <Variable x:TypeArguments="x:String" Name="strProcessedFileName" />
                   <Variable x:TypeArguments="x:String" Name="strFullProcessedName" />
@@ -257,6 +257,11 @@
                     <InArgument x:TypeArguments="x:String">[Path.Combine(Config("ProcessedFolderPath").ToString, strProcessedFileName)]</InArgument>
                   </Assign.Value>
                 </Assign>
+                <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="ExcelWriteStatus - Invoke Workflow File (Workflow\ExcelWriteStatus.xaml)" sap:VirtualizedContainerService.HintSize="434,210" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_5" UnSafe="False" WorkflowFileName="Workflow\ExcelWriteStatus.xaml">
+                  <ui:InvokeWorkflowFile.Arguments>
+                    <InArgument x:TypeArguments="x:String" x:Key="in_strRequestFilePath">[strRequestFilePath]</InArgument>
+                  </ui:InvokeWorkflowFile.Arguments>
+                </ui:InvokeWorkflowFile>
                 <ui:MoveFile ContinueOnError="{x:Null}" DestinationResource="{x:Null}" PathResource="{x:Null}" Destination="[strFullProcessedName]" DisplayName="Move File" sap:VirtualizedContainerService.HintSize="434,196.66666666666666" sap2010:WorkflowViewState.IdRef="MoveFile_1" Path="[strRequestFilePath]" />
                 <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="434,167.33333333333334" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Info" Message="[&quot;Zoho Ticket Created and File Moved to the Processed Folder.&quot;]" />
               </Sequence>
@@ -265,13 +270,13 @@
         </Sequence>
       </If.Then>
       <If.Else>
-        <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,255.33333333333334" sap2010:WorkflowViewState.IdRef="Sequence_3">
+        <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,227.33333333333334" sap2010:WorkflowViewState.IdRef="Sequence_3">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="354,167.33333333333334" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;No requests to process&quot;]" />
+          <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="382,167.33333333333334" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;No requests to process&quot;]" />
         </Sequence>
       </If.Else>
     </If>
