@@ -144,7 +144,7 @@ components:
 The results of the RPA program can
 be seen in the following video:
 
-![demo gif](https://github.com/anmv921/uipath-zoho/blob/main/Data/Demo/output2.gif)
+![demo gif](https://github.com/anmv921/uipath-zoho/blob/main/Data/Demo/demo2.gif)
 
 ***
 
