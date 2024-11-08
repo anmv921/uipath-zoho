@@ -2,8 +2,6 @@
   <x:Members>
     <x:Property Name="in_dtRequests" Type="InArgument(sd:DataTable)" />
     <x:Property Name="in_Config" Type="InArgument(scg:Dictionary(x:String, x:Object))" />
-    <x:Property Name="in_QueueName" Type="InArgument(x:String)" />
-    <x:Property Name="in_OrchestratorFolder" Type="InArgument(x:String)" />
   </x:Members>
   <VisualBasic.Settings>
     <x:Null />
@@ -127,7 +125,7 @@
                     </sap:WorkflowViewStateService.ViewState>
                     <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="456,897.3333333333334" sap2010:WorkflowViewState.IdRef="TryCatch_1">
                       <TryCatch.Try>
-                        <ui:AddQueueItem ServiceBaseAddress="{x:Null}" ContinueOnError="False" DisplayName="Add Queue Item" FolderPath="in_OrchestratorFolder" sap:VirtualizedContainerService.HintSize="334,198" sap2010:WorkflowViewState.IdRef="AddQueueItem_1" Priority="Normal" QueueType="in_QueueName" Reference="[DateTime.Now.ToString(&quot;dd-MM-yyyy_HH-mm-ss&quot;) + &quot;_&quot; + CurrentRow(&quot;Email&quot;).ToString.Trim]" TimeoutMS="60000">
+                        <ui:AddQueueItem ServiceBaseAddress="{x:Null}" ContinueOnError="False" DisplayName="Add Queue Item" FolderPath="MyFolder" sap:VirtualizedContainerService.HintSize="334,198" sap2010:WorkflowViewState.IdRef="AddQueueItem_1" Priority="Normal" QueueType="HelpDeskTicketGeneration" Reference="[DateTime.Now.ToString(&quot;dd-MM-yyyy_HH-mm-ss&quot;) + &quot;_&quot; + CurrentRow(&quot;Email&quot;).ToString.Trim]" TimeoutMS="60000">
                           <ui:AddQueueItem.ItemInformation>
                             <InArgument x:TypeArguments="x:String" x:Key="ContactName">[CurrentRow("ContactName").ToString.Trim]</InArgument>
                             <InArgument x:TypeArguments="x:String" x:Key="Email">[CurrentRow("Email").ToString.Trim]</InArgument>
@@ -139,7 +137,7 @@
                         <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="422,356.6666666666667" sap2010:WorkflowViewState.IdRef="Catch`1_1">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                               <x:Boolean x:Key="IsPinned">False</x:Boolean>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
