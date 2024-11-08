@@ -93,12 +93,24 @@
       <AssemblyReference>System.IO.FileSystem.DriveInfo</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="MoveInputFile" sap:VirtualizedContainerService.HintSize="673.3333333333333,463.3733333333333" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="MoveInputFile" sap:VirtualizedContainerService.HintSize="655.9999999999999,504" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:String" Name="newFilePath" />
+    </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:MoveFile ContinueOnError="{x:Null}" DestinationResource="{x:Null}" PathResource="{x:Null}" Destination="[Path.Combine(in_ProcessedFolderPath, DateTime.Now.ToString(&quot;dd-MM-yyyy_HH-mm-ss&quot;)+&quot;.xlsx&quot;)]" DisplayName="Move File" sap:VirtualizedContainerService.HintSize="416,187.33333333333334" sap2010:WorkflowViewState.IdRef="MoveFile_1" Path="[in_strRequestFilePath]" />
+    <Assign sap:VirtualizedContainerService.HintSize="434,117.33333333333333" sap2010:WorkflowViewState.IdRef="Assign_1">
+      <Assign.To>
+        <OutArgument x:TypeArguments="x:String">[newFilePath]</OutArgument>
+      </Assign.To>
+      <Assign.Value>
+        <InArgument x:TypeArguments="x:String">[Path.Combine(in_ProcessedFolderPath, "Requests_" + DateTime.Now.ToString("dd-MM-yyyy_HH-mm-ss")+".xlsx")]</InArgument>
+      </Assign.Value>
+    </Assign>
+    <ui:MoveFile ContinueOnError="{x:Null}" DestinationResource="{x:Null}" PathResource="{x:Null}" Destination="[newFilePath]" DisplayName="Move File" sap:VirtualizedContainerService.HintSize="434,196.66666666666666" sap2010:WorkflowViewState.IdRef="MoveFile_1" Path="[in_strRequestFilePath]" />
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="434,167.33333333333334" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;[Dispatcher] File moved. New location - &quot; + newFilePath]" />
   </Sequence>
 </Activity>

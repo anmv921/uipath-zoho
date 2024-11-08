@@ -753,7 +753,7 @@
                                             <ui:InvokeWorkflowFile.Arguments>
                                               <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="in_Config">[Config]</InArgument>
                                               <InArgument x:TypeArguments="x:String" x:Key="in_strRequestFilePath">[str_RequestFilePath]</InArgument>
-                                              <InArgument x:TypeArguments="x:String" x:Key="in_ProcessedFolderPath" />
+                                              <InArgument x:TypeArguments="x:String" x:Key="in_ProcessedFolderPath">[processedFolderPath]</InArgument>
                                             </ui:InvokeWorkflowFile.Arguments>
                                           </ui:InvokeWorkflowFile>
                                         </Sequence>
