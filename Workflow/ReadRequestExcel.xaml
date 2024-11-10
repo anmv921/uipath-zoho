@@ -1,9 +1,7 @@
 <Activity mc:Ignorable="sap sap2010" x:Class="ReadRequestExcel" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ue="clr-namespace:UiPath.Excel;assembly=UiPath.Excel.Activities" xmlns:ueab="clr-namespace:UiPath.Excel.Activities.Business;assembly=UiPath.Excel.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
     <x:Property Name="in_strRequestFilePath" Type="InArgument(x:String)" />
-    <x:Property Name="out_strContactName" Type="OutArgument(x:String)" />
-    <x:Property Name="out_strEmail" Type="OutArgument(x:String)" />
-    <x:Property Name="out_strSubject" Type="OutArgument(x:String)" />
+    <x:Property Name="out_dtRequests" Type="OutArgument(sd:DataTable)" />
   </x:Members>
   <VisualBasic.Settings>
     <x:Null />
@@ -46,6 +44,7 @@
       <x:String>System.ComponentModel</x:String>
       <x:String>System.Xml.Serialization</x:String>
       <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>System.Numerics</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -108,6 +107,10 @@
       <AssemblyReference>System.Linq.Parallel</AssemblyReference>
       <AssemblyReference>System.Collections.Immutable</AssemblyReference>
       <AssemblyReference>System.Linq.Queryable</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.ViewModels</AssemblyReference>
+      <AssemblyReference>System.Runtime.Numerics</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
   <sap:WorkflowViewStateService.ViewState>
@@ -115,82 +118,55 @@
       <x:Boolean x:Key="ShouldExpandAll">True</x:Boolean>
     </scg:Dictionary>
   </sap:WorkflowViewStateService.ViewState>
-  <Sequence DisplayName="ReadRequestExcel" sap:VirtualizedContainerService.HintSize="798.6666666666666,2539.3333333333335" sap2010:WorkflowViewState.IdRef="Sequence_1">
-    <Sequence.Variables>
-      <Variable x:TypeArguments="sd:DataTable" Name="dtRequest" />
-    </Sequence.Variables>
+  <Sequence DisplayName="ReadRequestExcel" sap:VirtualizedContainerService.HintSize="655.9999999999999,1829.3333333333333" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="736.6666666666666,2451.3333333333335" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+    <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="652.6666666666666,1806.6666666666667" sap2010:WorkflowViewState.IdRef="TryCatch_1">
       <TryCatch.Try>
-        <Sequence DisplayName="Sequence Try" sap:VirtualizedContainerService.HintSize="698,1657.3333333333333" sap2010:WorkflowViewState.IdRef="Sequence_2">
+        <Sequence DisplayName="Sequence Try" sap:VirtualizedContainerService.HintSize="614,1107.3333333333333" sap2010:WorkflowViewState.IdRef="Sequence_2">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               <x:Boolean x:Key="IsPinned">False</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <Assign sap:VirtualizedContainerService.HintSize="636,117.33333333333333" sap2010:WorkflowViewState.IdRef="Assign_1">
+          <Assign sap:VirtualizedContainerService.HintSize="580,117.33333333333333" sap2010:WorkflowViewState.IdRef="Assign_1">
             <Assign.To>
-              <OutArgument x:TypeArguments="sd:DataTable">[dtRequest]</OutArgument>
+              <OutArgument x:TypeArguments="sd:DataTable">[out_dtRequests]</OutArgument>
             </Assign.To>
             <Assign.Value>
               <InArgument x:TypeArguments="sd:DataTable">[New System.Data.DataTable]</InArgument>
             </Assign.Value>
           </Assign>
-          <ueab:ExcelProcessScopeX LaunchTimeout="{x:Null}" DisplayAlerts="False" DisplayName="Excel Process Scope" ExistingProcessAction="ForceKill" FileConflictResolution="ThrowException" sap:VirtualizedContainerService.HintSize="636,1347.3333333333333" sap2010:WorkflowViewState.IdRef="ExcelProcessScopeX_1" LaunchMethod="Automation" MacroSettings="DisableAll" ProcessMode="ReuseIfExists" ShowExcelWindow="True">
+          <ueab:ExcelProcessScopeX LaunchTimeout="{x:Null}" DisplayAlerts="False" DisplayName="Excel Process Scope" ExistingProcessAction="ForceKill" FileConflictResolution="ThrowException" sap:VirtualizedContainerService.HintSize="580,930" sap2010:WorkflowViewState.IdRef="ExcelProcessScopeX_1" LaunchMethod="Automation" MacroSettings="DisableAll" ProcessMode="ReuseIfExists" ShowExcelWindow="False">
             <ueab:ExcelProcessScopeX.Body>
               <ActivityAction x:TypeArguments="ui:IExcelProcess">
                 <ActivityAction.Argument>
                   <DelegateInArgument x:TypeArguments="ui:IExcelProcess" Name="ExcelProcessScopeTag" />
                 </ActivityAction.Argument>
-                <Sequence DisplayName="Fazer" sap:VirtualizedContainerService.HintSize="602,1228" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                <Sequence DisplayName="Fazer" sap:VirtualizedContainerService.HintSize="546,820" sap2010:WorkflowViewState.IdRef="Sequence_4">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <ueab:ExcelApplicationCard Password="{x:Null}" CreateNewFile="False" DisplayName="Use Excel File" sap:VirtualizedContainerService.HintSize="540,1140" sap2010:WorkflowViewState.IdRef="ExcelApplicationCard_1" ReadFormatting="RawValue" ResizeWindow="Maximize" TemplatePath="Data\Requests\Request.xlsx" UseTemplate="True" WorkbookPath="[in_strRequestFilePath]">
+                  <ueab:ExcelApplicationCard Password="{x:Null}" SensitivityLabel="{x:Null}" CreateNewFile="False" DisplayName="Use Excel File" sap:VirtualizedContainerService.HintSize="512,760" sap2010:WorkflowViewState.IdRef="ExcelApplicationCard_1" ReadFormatting="RawValue" ResizeWindow="Maximize" SensitivityOperation="None" TemplatePath="Data\Requests\Request.xlsx" UseTemplate="True" WorkbookPath="[in_strRequestFilePath]">
                     <ueab:ExcelApplicationCard.Body>
                       <ActivityAction x:TypeArguments="ue:IWorkbookQuickHandle">
                         <ActivityAction.Argument>
                           <DelegateInArgument x:TypeArguments="ue:IWorkbookQuickHandle" Name="Excel" />
                         </ActivityAction.Argument>
-                        <Sequence DisplayName="Fazer" sap:VirtualizedContainerService.HintSize="506,814" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                        <Sequence DisplayName="Fazer" sap:VirtualizedContainerService.HintSize="478,434" sap2010:WorkflowViewState.IdRef="Sequence_5">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
-                          <ueab:ReadRangeX DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="444,206.66666666666666" sap2010:WorkflowViewState.IdRef="ReadRangeX_1" Range="[Excel.Sheet(&quot;Sheet1&quot;).Range(&quot;A:C&quot;)]" ReadFormatting="RawValue" SaveTo="[dtRequest]" />
-                          <Assign sap:VirtualizedContainerService.HintSize="444,117.33333333333333" sap2010:WorkflowViewState.IdRef="Assign_2">
-                            <Assign.To>
-                              <OutArgument x:TypeArguments="x:String">[out_strContactName]</OutArgument>
-                            </Assign.To>
-                            <Assign.Value>
-                              <InArgument x:TypeArguments="x:String">[dtRequest(0)("ContactName").ToString]</InArgument>
-                            </Assign.Value>
-                          </Assign>
-                          <Assign sap:VirtualizedContainerService.HintSize="444,117.33333333333333" sap2010:WorkflowViewState.IdRef="Assign_3">
-                            <Assign.To>
-                              <OutArgument x:TypeArguments="x:String">[out_strEmail]</OutArgument>
-                            </Assign.To>
-                            <Assign.Value>
-                              <InArgument x:TypeArguments="x:String">[dtRequest(0)("Email").ToString]</InArgument>
-                            </Assign.Value>
-                          </Assign>
-                          <Assign sap:VirtualizedContainerService.HintSize="444,117.33333333333333" sap2010:WorkflowViewState.IdRef="Assign_4">
-                            <Assign.To>
-                              <OutArgument x:TypeArguments="x:String">[out_strSubject]</OutArgument>
-                            </Assign.To>
-                            <Assign.Value>
-                              <InArgument x:TypeArguments="x:String">[dtRequest(0)("Subject").ToString]</InArgument>
-                            </Assign.Value>
-                          </Assign>
-                          <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="444,167.33333333333334" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Excel read successfully | Name - &quot; + out_strContactName + &quot; | Email - &quot; + out_strEmail + &quot; | Subject - &quot; + out_strSubject]" />
+                          <ueab:ReadRangeX DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="444,206.66666666666666" sap2010:WorkflowViewState.IdRef="ReadRangeX_1" Range="[Excel.Sheet(&quot;Sheet1&quot;).Range(&quot;A:C&quot;)]" ReadFormatting="RawValue" SaveTo="[out_dtRequests]" />
+                          <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="444,167.33333333333334" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info" Message="[&quot;[Excel] Input file read. Numer of rows: &quot; + out_dtRequests.RowCount.ToString]" />
                         </Sequence>
                       </ActivityAction>
                     </ueab:ExcelApplicationCard.Body>
@@ -199,11 +175,10 @@
               </ActivityAction>
             </ueab:ExcelProcessScopeX.Body>
           </ueab:ExcelProcessScopeX>
-          <ui:ClearDataTable DataTable="[dtRequest]" DisplayName="Clear Data Table" sap:VirtualizedContainerService.HintSize="636,104.66666666666667" sap2010:WorkflowViewState.IdRef="ClearDataTable_1" />
         </Sequence>
       </TryCatch.Try>
       <TryCatch.Catches>
-        <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="702.6666666666666,451.3333333333333" sap2010:WorkflowViewState.IdRef="Catch`1_1">
+        <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="618.6666666666666,356.6666666666667" sap2010:WorkflowViewState.IdRef="Catch`1_1">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -214,14 +189,14 @@
             <ActivityAction.Argument>
               <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
             </ActivityAction.Argument>
-            <Sequence DisplayName="Sequence Exception" sap:VirtualizedContainerService.HintSize="416,379.3333333333333" sap2010:WorkflowViewState.IdRef="Sequence_3">
+            <Sequence DisplayName="Sequence Exception" sap:VirtualizedContainerService.HintSize="416,284.6666666666667" sap2010:WorkflowViewState.IdRef="Sequence_3">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="354,176.66666666666666" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Error" Message="[&quot;Error in Excel read operation with following&#xA;exception: &quot;+exception.Message]" />
-              <TerminateWorkflow DisplayName="Terminate Workflow" sap:VirtualizedContainerService.HintSize="354,114.66666666666667" sap2010:WorkflowViewState.IdRef="TerminateWorkflow_1" Reason="Stropping the automation due to an error while reading the Excel input" />
+              <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="382,176.66666666666666" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Error" Message="[&quot;Error in Excel read operation with following&#xA;exception: &quot;+exception.Message]" />
+              <Rethrow sap:VirtualizedContainerService.HintSize="382,48" sap2010:WorkflowViewState.IdRef="Rethrow_1" />
             </Sequence>
           </ActivityAction>
         </Catch>
