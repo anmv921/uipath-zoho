@@ -162,7 +162,7 @@ be seen in the following video:
 - Add annotations and logs
 - Change the relevant variables to assets as opposed
 to config values.
-- Add a login workflow
 - Draw.io diagram
+- Add a report email
 
 </details>
