@@ -15,7 +15,7 @@ which uses the classic selectors. Furthermore,
 this implementation of the automation is an unattended
 automation and not an attended one, meaning it is built
 to run without direct supervision on a virtual Windows
-machine. Furthermore, the project uses UIPath's REFramework
+machine. Furthermore, the project uses UIPath's REFramework.
 
 Zoho is a web application which follows
 the SaaS model and provides a 
